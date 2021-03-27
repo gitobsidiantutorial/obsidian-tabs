@@ -23,7 +23,7 @@ width: 100%;
 top: 29px; /* if pane header height is changed from default, edit here to match */
 }
 
-.mod-root.workspace-split.mod-vertical > div.workspace-leaf:only-of-type {
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf:only-of-type { /* maximise pane when only one tab visible */
 top: 0px;
 bottom: 0px;
 height: 100%!important;
