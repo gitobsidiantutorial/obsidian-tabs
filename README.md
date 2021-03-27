@@ -1,5 +1,5 @@
-## obsidian-tabs
-### css snippet for tabbed obsidian browsing
+## Obsidian-tabs
+### CSS snippet for tabbed obsidian usage
 
 
 [Watch the demo.](https://i.imgur.com/7V0m2Ub.mp4)
