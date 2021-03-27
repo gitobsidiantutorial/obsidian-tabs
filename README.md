@@ -1,7 +1,9 @@
 ## obsidian-tabs
 ### css snippet for tabbed obsidian browsing
 
-https://github.com/gitobsidiantutorial/obsidian-git-tut-windows/blob/main/tabbed%20mode.css
+![](demo.mp4)
+
+https://github.com/gitobsidiantutorial/obsidian-tabs/blob/main/tabs.css
 
 Tabbed mode is made to be used in unison with the [pane relief plugin](https://github.com/pjeby/pane-relief), in particular the cycle to workspace pane hotkeys, but can certainly be used without.
 
