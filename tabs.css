@@ -1,0 +1,107 @@
+/* REQUIRED */
+
+.mod-root.workspace-split.mod-vertical { 
+overflow-x: hidden; 
+flex-direction: row-reverse; /* order reversed to work better with pane-relief 'cycle to next pane hotkey' */
+overflow-y: auto; /* no second scrollbar should be visible, if one appears, then I've made a mistake */
+}
+
+
+/* turns inactive panes into tabs*/
+.mod-root.workspace-split.mod-vertical > div { 
+height: 29px; /* change if you prefer differently sized pane headers */
+border-radius: 6px 6px 0px 0px; /* adds a slight rounding to the top corners of a pane header - NOT ESSENTIAL */
+}
+
+
+/* set active pane below tab bar */
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active {
+position: absolute;
+height: calc(100% - 29px); /* if pane header height is changed from default, edit here to match */
+min-width: 100%;
+width: 100%;
+top: 29px; /* if pane header height is changed from default, edit here to match */
+}
+
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf:only-of-type {
+top: 0px;
+bottom: 0px;
+height: 100%!important;
+}
+
+.view-header-title-container:after {  /* remove pane header shadows */
+display:none;
+}
+
+
+/* OPTIONAL */
+
+/*set maximum tab width, left align tabs */
+.mod-root.workspace-split.mod-vertical > div { 
+flex-grow: 0;
+flex-shrink: 1;
+flex-basis: 12.5%;
+}
+
+.mod-root.workspace-split.mod-vertical { 
+justify-content: flex-end;
+}
+
+/* hide header button, more options, and edit button on tabs */
+
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf a[aria-label="Edit (Ctrl/Cmd+Click to edit in new pane)"],
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf .view-header-icon,
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf a[aria-label="Preview (Ctrl/Cmd+Click to open in new pane)"],
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf a[aria-label="More options"]{
+display: none;
+}
+
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active a[aria-label="Edit (Ctrl/Cmd+Click to edit in new pane)"],
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-activ a[aria-label="Preview (Ctrl/Cmd+Click to open in new pane)"],
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active .view-header-icon,
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active a[aria-label="More options"]{
+display: block;
+}
+
+
+/* smaller tab titles */
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf .view-header-title{
+font-size: 14px;
+padding-left: 0.2rem; 
+}
+
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active .view-header-title{
+font-size: inherit;
+padding-left: 0rem; 
+}
+
+
+/* underline next tabs [pane relief cycle to next pane hotkey] */
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf{
+text-decoration: underline;
+}
+
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active{
+text-decoration: none;
+}
+
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active ~ div.workspace-leaf {
+text-decoration: none!important;
+}
+
+
+
+
+/* increase room for tab title */
+
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf .view-actions{
+padding: 4px 0px;
+}
+
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active .view-actions{
+padding: 4px 10px;
+}
+
+
+
+
