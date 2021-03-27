@@ -2,7 +2,7 @@
 ### css snippet for tabbed obsidian browsing
 
 
-[Watch the demo.](https://i.imgur.com/7V0m2Ub.webm)
+[Watch the demo.](https://i.imgur.com/7V0m2Ub.mp4)
 
 
 [Get the snippet.](https://github.com/gitobsidiantutorial/obsidian-tabs/blob/main/tabs.css)
