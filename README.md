@@ -5,7 +5,7 @@
 [Watch the demo.](https://i.imgur.com/7V0m2Ub.mp4)
 
 
-[Get the snippet.](https://github.com/gitobsidiantutorial/obsidian-tabs/blob/main/tabs.css)
+[Get the snippet.](https://raw.githubusercontent.com/gitobsidiantutorial/obsidian-tabs/main/tabs.css)
 
 Tabbed mode is made to be used in unison with the [pane relief plugin](https://github.com/pjeby/pane-relief), in particular the _cycle to workspace pane_ hotkeys, but can certainly be used without.
 
