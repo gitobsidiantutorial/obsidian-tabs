@@ -40,7 +40,8 @@ display:none;
 .mod-root.workspace-split.mod-vertical > div { 
 flex-grow: 0;
 flex-shrink: 1;
-flex-basis: 12.5%;
+flex-basis: 11.5rem; /*to allow for legible titles at base level, or use 12.5%, to neatly fit 8 tabs without resizing */
+/*flex-basis: 12.5%;*/
 }
 
 .mod-root.workspace-split.mod-vertical { 
