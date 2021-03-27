@@ -2,7 +2,7 @@
 ### css snippet for tabbed obsidian browsing
 
 
-![](https://user-images.githubusercontent.com/81381984/112723680-1d5fd300-8f10-11eb-8eef-8439c1224b2d.mp4)
+![](https://i.imgur.com/7V0m2Ub.webm)
 
 
 [Get the snippet](https://github.com/gitobsidiantutorial/obsidian-tabs/blob/main/tabs.css)
