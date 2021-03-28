@@ -1,6 +1,6 @@
 ## Obsidian-tabs
 ### CSS snippet for tabbed obsidian usage
-
+Opening a document in a new pane (ctrl+click) instead activates tabbed view. One document is visible in the viewer, and the active document can be switched by selecting another tab.
 
 [Watch the demo.](https://i.imgur.com/7V0m2Ub.mp4)
 
