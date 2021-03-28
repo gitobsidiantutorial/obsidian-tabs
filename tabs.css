@@ -2,7 +2,7 @@
 
 .mod-root.workspace-split.mod-vertical { 
 overflow-x: hidden; 
-flex-direction: row-reverse; /* order reversed to work better with pane-relief 'cycle to next pane hotkey' */
+flex-direction: row; /* order reversed to work better with pane-relief 'cycle to next pane hotkey' */
 overflow-y: auto; /* no second scrollbar should be visible, if one appears, then I've made a mistake */
 }
 
@@ -10,9 +10,12 @@ overflow-y: auto; /* no second scrollbar should be visible, if one appears, then
 /* turns inactive panes into tabs*/
 .mod-root.workspace-split.mod-vertical > div { 
 height: 29px; /* change if you prefer differently sized pane headers */
-border-radius: 6px 6px 0px 0px; /* adds a slight rounding to the top corners of a pane header - NOT ESSENTIAL */
+border-radius: 12px 12px 0px 0px; /* adds a slight rounding to the top corners of a pane header - NOT ESSENTIAL */
 }
 
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active { 
+border-radius: 0; /* no rounding for main pane - NOT ESSENTIAL */
+}
 
 /* set active pane below tab bar */
 .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active {
@@ -23,7 +26,7 @@ width: 100%;
 top: 29px; /* if pane header height is changed from default, edit here to match */
 }
 
-.mod-root.workspace-split.mod-vertical > div.workspace-leaf:only-of-type { /* maximise pane when only one tab visible */
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf:only-of-type { /*if only one pane open, maximise*/
 top: 0px;
 bottom: 0px;
 height: 100%!important;
@@ -36,16 +39,65 @@ display:none;
 
 /* OPTIONAL */
 
+/* tab numbers (useful for pane relief shortcuts) */
+.mod-root.workspace-split.mod-vertical > div:nth-child(20n-18) { --number :  1;} 
+.mod-root.workspace-split.mod-vertical > div:nth-child(20n-17) { --number :  2;}
+.mod-root.workspace-split.mod-vertical > div:nth-child(20n-16) { --number :  3;}
+.mod-root.workspace-split.mod-vertical > div:nth-child(20n-15) { --number :  4;}
+.mod-root.workspace-split.mod-vertical > div:nth-child(20n-14) { --number :  5;}
+.mod-root.workspace-split.mod-vertical > div:nth-child(20n-13) { --number :  6;}
+.mod-root.workspace-split.mod-vertical > div:nth-child(20n-12) { --number :  7;}
+.mod-root.workspace-split.mod-vertical > div:nth-child(20n-11) { --number :  8;}
+.mod-root.workspace-split.mod-vertical > div:nth-child(20n-10) { --number :  9;}
+.mod-root.workspace-split.mod-vertical > div:nth-child(20n-9) { --number :  10;}
+.mod-root.workspace-split.mod-vertical > div:nth-child(20n-8) { --number :  11;}
+.mod-root.workspace-split.mod-vertical > div:nth-child(20n-7) { --number :  12;}
+.mod-root.workspace-split.mod-vertical > div:nth-child(20n-6) { --number :  13;}
+.mod-root.workspace-split.mod-vertical > div:nth-child(20n-5) { --number :  14;}
+.mod-root.workspace-split.mod-vertical > div:nth-child(20n-4) { --number :  15;}
+.mod-root.workspace-split.mod-vertical > div:nth-child(20n-3) { --number :  16;}
+.mod-root.workspace-split.mod-vertical > div:nth-child(20n-2) { --number :  17;}
+.mod-root.workspace-split.mod-vertical > div:nth-child(20n-1) { --number :  18;}
+.mod-root.workspace-split.mod-vertical > div:nth-child(20n+0) { --number :  19;}
+.mod-root.workspace-split.mod-vertical > div:nth-child(20n+1) { --number :  20;}
+
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf .view-header-title,
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf .view-header-title-container {padding-left: 0px}
+
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf .view-header-title::before{
+counter-reset: number var(--number);
+padding-top: 2px;
+display: inline-block;
+height: 40px;
+content: counter(number);
+margin-right: 0.5em;
+padding: 0 0.6em;
+background-color: var(--background-modifier-border); /* change to appealing colours in your theme */
+}
+
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active .view-header-title::before {
+color: var(--text-muted); /* change to appealing colour in your theme */
+background-color: var(--background-secondary-alt);
+margin-left: -0.3em;
+}
+
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active .view-header-icon {
+top: 0;
+padding-top: 7px;
+padding-right: 5px;
+background-color: var(--background-secondary-alt); /* make background of icon the same as the tab numbering */
+}
+
+
 /*set maximum tab width, left align tabs */
 .mod-root.workspace-split.mod-vertical > div { 
 flex-grow: 0;
 flex-shrink: 1;
-flex-basis: 11.5rem; /*to allow for legible titles at base level, or use 12.5%, to neatly fit 8 tabs without resizing */
-/*flex-basis: 12.5%;*/
+flex-basis: 11.5rem;
 }
 
 .mod-root.workspace-split.mod-vertical { 
-justify-content: flex-end;
+justify-content: flex-start;
 }
 
 /* hide header button, more options, and edit button on tabs */
@@ -58,7 +110,7 @@ display: none;
 }
 
 .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active a[aria-label="Edit (Ctrl/Cmd+Click to edit in new pane)"],
-.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-activ a[aria-label="Preview (Ctrl/Cmd+Click to open in new pane)"],
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active a[aria-label="Preview (Ctrl/Cmd+Click to open in new pane)"],
 .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active .view-header-icon,
 .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active a[aria-label="More options"]{
 display: block;
@@ -68,7 +120,6 @@ display: block;
 /* smaller tab titles */
 .mod-root.workspace-split.mod-vertical > div.workspace-leaf .view-header-title{
 font-size: 14px;
-padding-left: 0.2rem; 
 }
 
 .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active .view-header-title{
@@ -76,18 +127,15 @@ font-size: inherit;
 padding-left: 0rem; 
 }
 
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active::before{
+font-size: inherit;
+padding-left: 0rem; 
+}
+
 
 /* underline next tabs [pane relief cycle to next pane hotkey] */
-.mod-root.workspace-split.mod-vertical > div.workspace-leaf{
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active + div.workspace-leaf {
 text-decoration: underline;
-}
-
-.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active{
-text-decoration: none;
-}
-
-.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active ~ div.workspace-leaf {
-text-decoration: none!important;
 }
 
 
