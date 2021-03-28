@@ -18,6 +18,8 @@ Tabbed mode is made to be used in unison with the [pane relief plugin](https://g
 
 - Automatic hiding of the tab bar when only one pane is open
 
+- Fully compatible with the maximise pane plugin 
+
 - Smaller tab styling relative to main pane (optional)
 
 - Maximum width left aligned tabs (optional)
@@ -35,7 +37,6 @@ Tabbed mode is made to be used in unison with the [pane relief plugin](https://g
 
 - The focused tab doesn't appear in the tab overview, hence the underlining workaround to clarify its relative position.
 
-- Tab bar can be hidden by the maximise pane plugin, but the focused pane does not occupy the freed space.
 
 #### Usage:
 
