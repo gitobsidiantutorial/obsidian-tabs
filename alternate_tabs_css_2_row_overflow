@@ -1,0 +1,210 @@
+/* REQUIRED */
+.mod-root.workspace-split.mod-vertical{
+ --numtabs : 10;  /* set expected maximum number of tabs here  */
+ --w1 : calc(100% * 2 / (var(--numtabs)));
+ --w2 : calc(100% * 2 / (var(--numtabs) - 2));
+}
+
+
+.mod-root.workspace-split.mod-vertical > div { 
+flex-grow: 1;
+flex-shrink: 1;
+min-width: var(--w1);
+max-width: var(--w2);
+}
+
+.mod-root.workspace-split.mod-vertical { 
+overflow-x: hidden; 
+flex-direction: row; /* order reversed to work better with pane-relief 'cycle to next pane hotkey' */
+flex-wrap: wrap;
+align-content: stretch;
+align-items: stretch;
+overflow-y: auto; /* no second scrollbar should be visible, if one appears, then I've made a mistake */
+}
+
+.view-content {
+height: 100%;
+}
+
+/* turns inactive panes into tabs*/
+.mod-root.workspace-split.mod-vertical > div { 
+height: 29px; /* change if you prefer differently sized pane headers */
+border-radius: 10px 10px 0px 0px; /* adds a slight rounding to the top corners of a pane header - NOT ESSENTIAL */
+border: 1px solid var(--background-modifier-border); /* adds a slight outline to the tab header - NOT ESSENTIAL */
+}
+
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active .view-header{border-left: 1px solid var(--background-modifier-border) } /* adds a slight outline to the main window header - NOT ESSENTIAL */
+
+
+.mod-root.workspace-split.mod-vertical > div .view-header{ 
+border-top: 0;
+}
+.mod-root.workspace-split.mod-vertical > div:not(.mod-active) .view-header{ 
+border-bottom: 0;
+}
+
+
+
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active { 
+border-radius: 0; /* no rounding for main pane - NOT ESSENTIAL */
+border: 0;
+}
+
+/* set active pane below tab bar */
+
+
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf:not(.mod-active) {
+margin-top: auto;
+}
+/*set maximum tab width */
+
+
+
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active {
+align-self: stretch;
+order: 99;
+min-width: 100%;
+min-height: calc(100% - 29px - 29px);
+height: auto;
+overflow-y: hidden;
+width: 100%;
+}
+
+/* compatibility with maximise pane plugin */
+.mod-root.workspace-split.mod-vertical.maximised > div.workspace-leaf.mod-active {
+height: 100%;
+top: 0px;
+border-radius: 10px 0px 0px 0px;
+border-top: 1px solid var(--background-modifier-border);
+}
+.maximised .view-header {height: 29px;  } /* if pane header height is changed from default, edit here to match */
+
+
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf:only-of-type { /*if only one pane open, maximise*/
+top: 0px;
+bottom: 0px;
+height: 100%!important;
+}
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf:only-of-type .view-header { 
+height: 29px; /* if pane header height is changed from default, edit here to match */
+}
+
+.view-header-title-container:after {  /* remove pane header shadows */
+display:none;
+}
+
+
+/* OPTIONAL */
+
+/* non pane relief options */
+
+/* increase room for tab title */
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf .view-actions{
+padding: 4px 0px;
+}
+
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active .view-actions{
+padding: 4px 10px;
+}
+
+/* smaller tab titles */
+.mod-root > div.workspace-leaf .view-header-title{
+font-size: 14px;
+padding-left: 0.2em;
+}
+
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active .view-header-title{
+font-size: inherit;
+padding-left: 0rem; 
+}
+
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active::before{
+font-size: inherit;
+padding-left: 0rem; 
+}
+
+/* hide header button, more options, and edit button on tabs */
+
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf a[aria-label="Edit (Ctrl/Cmd+Click to edit in new pane)"],
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf .view-header-icon,
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf a[aria-label="Preview (Ctrl/Cmd+Click to open in new pane)"],
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf a[aria-label="More options"]{
+display: none;
+}
+
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active a[aria-label="Edit (Ctrl/Cmd+Click to edit in new pane)"],
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active a[aria-label="Preview (Ctrl/Cmd+Click to open in new pane)"],
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active .view-header-icon,
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active a[aria-label="More options"]{
+display: block;
+}
+
+
+
+/* Pane relief specific options */
+
+/* tab numbers (useful for pane relief shortcuts) */
+.mod-root.workspace-split.mod-vertical > div:nth-child(20n-18) { --number :  1;} 
+.mod-root.workspace-split.mod-vertical > div:nth-child(20n-17) { --number :  2;}
+.mod-root.workspace-split.mod-vertical > div:nth-child(20n-16) { --number :  3;}
+.mod-root.workspace-split.mod-vertical > div:nth-child(20n-15) { --number :  4;}
+.mod-root.workspace-split.mod-vertical > div:nth-child(20n-14) { --number :  5;}
+.mod-root.workspace-split.mod-vertical > div:nth-child(20n-13) { --number :  6;}
+.mod-root.workspace-split.mod-vertical > div:nth-child(20n-12) { --number :  7;}
+.mod-root.workspace-split.mod-vertical > div:nth-child(20n-11) { --number :  8;}
+.mod-root.workspace-split.mod-vertical > div:nth-child(20n-10) { --number :  9;}
+.mod-root.workspace-split.mod-vertical > div:nth-child(20n-9) { --number :  10;}
+.mod-root.workspace-split.mod-vertical > div:nth-child(20n-8) { --number :  11;}
+.mod-root.workspace-split.mod-vertical > div:nth-child(20n-7) { --number :  12;}
+.mod-root.workspace-split.mod-vertical > div:nth-child(20n-6) { --number :  13;}
+.mod-root.workspace-split.mod-vertical > div:nth-child(20n-5) { --number :  14;}
+.mod-root.workspace-split.mod-vertical > div:nth-child(20n-4) { --number :  15;}
+.mod-root.workspace-split.mod-vertical > div:nth-child(20n-3) { --number :  16;}
+.mod-root.workspace-split.mod-vertical > div:nth-child(20n-2) { --number :  17;}
+.mod-root.workspace-split.mod-vertical > div:nth-child(20n-1) { --number :  18;}
+.mod-root.workspace-split.mod-vertical > div:nth-child(20n+0) { --number :  19;}
+.mod-root.workspace-split.mod-vertical > div:nth-child(20n+1) { --number :  20;}
+
+
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf .view-header-title,
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf .view-header-title-container {padding-left: 0px}
+
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf .view-header-title::before{
+counter-reset: number var(--number);
+padding-top: 2px;
+display: inline-block;
+height: 40px;
+content: counter(number);
+margin-right: 0.5em;
+padding: 0 0.6em;
+background-color: var(--background-secondary-alt); /* change to appealing colours in your theme */
+}
+
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active .view-header-title::before {
+color: var(--text-muted); /* change to appealing colour in your theme */
+background-color: var(--background-secondary-alt);
+margin-left: -0.3em;
+}
+
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active .view-header-icon {
+top: 0;
+padding-top: 6px;
+padding-right: 5px;
+background-color: var(--background-secondary-alt); /* make background of icon the same as the tab numbering */
+}
+
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active:only-of-type { border-radius: 10px 0px 0px 0px; }
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active:only-of-type .view-header-icon{background-color: inherit; margin-right:0.5em;}
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active:only-of-type .view-header-title::before { display: none; }
+
+.mod-root.workspace-split.mod-vertical.maximised > div.workspace-leaf.mod-active .view-header{
+border-left-width: 2px;
+border-top-width: 2px
+}
+
+/* underline next tab [pane relief cycle to next pane hotkey] */
+
+
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active + div.workspace-leaf {
+text-decoration: underline;
+}
