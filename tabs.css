@@ -10,7 +10,7 @@ overflow-y: auto; /* no second scrollbar should be visible, if one appears, then
 /* turns inactive panes into tabs*/
 .mod-root.workspace-split.mod-vertical > div { 
 height: 29px; /* change if you prefer differently sized pane headers */
-border-radius: 12px 12px 0px 0px; /* adds a slight rounding to the top corners of a pane header - NOT ESSENTIAL */
+border-radius: 10px 7px 0px 0px; /* adds a slight rounding to the top corners of a pane header - NOT ESSENTIAL */
 }
 
 .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active { 
@@ -83,7 +83,7 @@ margin-left: -0.3em;
 
 .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active .view-header-icon {
 top: 0;
-padding-top: 7px;
+padding-top: 6px;
 padding-right: 5px;
 background-color: var(--background-secondary-alt); /* make background of icon the same as the tab numbering */
 }
@@ -118,8 +118,9 @@ display: block;
 
 
 /* smaller tab titles */
-.mod-root.workspace-split.mod-vertical > div.workspace-leaf .view-header-title{
+.mod-root > div.workspace-leaf .view-header-title{
 font-size: 14px;
+padding-left: 0.2em;
 }
 
 .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active .view-header-title{
