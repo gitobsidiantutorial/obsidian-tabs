@@ -1,8 +1,9 @@
 /* REQUIRED */
 .mod-root.workspace-split.mod-vertical{
- --numtabs : 5;  /* set expected desired number of tabs per row here (total tabs = this number times two)  */
- --w1 : calc(100% * 2 / (var(--numtabs)*2));
- --w2 : calc(100% * 2 / (var(--numtabs)*2 - 2));
+--rows : 2;/* set desired number of rows here  */
+--numtabs : 5;  /* set expected desired number of tabs per row here (total tabs = this number times two)  */
+--w1 : calc(100% * var(--rows) / (var(--numtabs) * var(--rows)));
+--w2 : max(calc(100% * var(--rows) / (var(--numtabs) * var(--rows) - var(--rows))) , 11.5rem);
 }
 
 
@@ -64,7 +65,7 @@ margin-top: auto;
 align-self: stretch;
 order: 99;
 min-width: 100%;
-min-height: calc(100% - 29px - 29px);
+min-height: calc(100% - 29px * var(--rows));
 height: auto;
 overflow-y: hidden;
 width: 100%;
