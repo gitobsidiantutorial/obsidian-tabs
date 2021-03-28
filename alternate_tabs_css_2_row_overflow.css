@@ -1,8 +1,8 @@
 /* REQUIRED */
 .mod-root.workspace-split.mod-vertical{
- --numtabs : 10;  /* set expected maximum number of tabs here  */
- --w1 : calc(100% * 2 / (var(--numtabs)));
- --w2 : calc(100% * 2 / (var(--numtabs) - 2));
+ --numtabs : 5;  /* set expected desired number of tabs per row here (total tabs = this number times two)  */
+ --w1 : calc(100% * 2 / (var(--numtabs)*2));
+ --w2 : calc(100% * 2 / (var(--numtabs)*2 - 2));
 }
 
 
