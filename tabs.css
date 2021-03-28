@@ -48,6 +48,60 @@ display:none;
 
 /* OPTIONAL */
 
+/* non pane relief options */
+
+/* increase room for tab title */
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf .view-actions{
+padding: 4px 0px;
+}
+
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active .view-actions{
+padding: 4px 10px;
+}
+
+/* smaller tab titles */
+.mod-root > div.workspace-leaf .view-header-title{
+font-size: 14px;
+padding-left: 0.2em;
+}
+
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active .view-header-title{
+font-size: inherit;
+padding-left: 0rem; 
+}
+
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active::before{
+font-size: inherit;
+padding-left: 0rem; 
+}
+
+/* hide header button, more options, and edit button on tabs */
+
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf a[aria-label="Edit (Ctrl/Cmd+Click to edit in new pane)"],
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf .view-header-icon,
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf a[aria-label="Preview (Ctrl/Cmd+Click to open in new pane)"],
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf a[aria-label="More options"]{
+display: none;
+}
+
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active a[aria-label="Edit (Ctrl/Cmd+Click to edit in new pane)"],
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active a[aria-label="Preview (Ctrl/Cmd+Click to open in new pane)"],
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active .view-header-icon,
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active a[aria-label="More options"]{
+display: block;
+}
+
+/*set maximum tab width */
+
+.mod-root.workspace-split.mod-vertical > div { 
+flex-grow: 0;
+flex-shrink: 1;
+flex-basis: 11.5rem;
+}
+
+
+/* Pane relief specific options */
+
 /* tab numbers (useful for pane relief shortcuts) */
 .mod-root.workspace-split.mod-vertical > div:nth-child(20n-18) { --number :  1;} 
 .mod-root.workspace-split.mod-vertical > div:nth-child(20n-17) { --number :  2;}
@@ -106,69 +160,11 @@ background-color: var(--background-secondary-alt); /* make background of icon th
 .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active:only-of-type .view-header-title::before { display: none; }
 
 
-
-/*set maximum tab width, left align tabs */
-.mod-root.workspace-split.mod-vertical > div { 
-flex-grow: 0;
-flex-shrink: 1;
-flex-basis: 11.5rem;
-}
-
-.mod-root.workspace-split.mod-vertical { 
-justify-content: flex-start;
-}
-
-/* hide header button, more options, and edit button on tabs */
-
-.mod-root.workspace-split.mod-vertical > div.workspace-leaf a[aria-label="Edit (Ctrl/Cmd+Click to edit in new pane)"],
-.mod-root.workspace-split.mod-vertical > div.workspace-leaf .view-header-icon,
-.mod-root.workspace-split.mod-vertical > div.workspace-leaf a[aria-label="Preview (Ctrl/Cmd+Click to open in new pane)"],
-.mod-root.workspace-split.mod-vertical > div.workspace-leaf a[aria-label="More options"]{
-display: none;
-}
-
-.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active a[aria-label="Edit (Ctrl/Cmd+Click to edit in new pane)"],
-.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active a[aria-label="Preview (Ctrl/Cmd+Click to open in new pane)"],
-.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active .view-header-icon,
-.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active a[aria-label="More options"]{
-display: block;
-}
-
-
-/* smaller tab titles */
-.mod-root > div.workspace-leaf .view-header-title{
-font-size: 14px;
-padding-left: 0.2em;
-}
-
-.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active .view-header-title{
-font-size: inherit;
-padding-left: 0rem; 
-}
-
-.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active::before{
-font-size: inherit;
-padding-left: 0rem; 
-}
-
-
-/* underline next tabs [pane relief cycle to next pane hotkey] */
+/* underline next tab [pane relief cycle to next pane hotkey] */
 .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active + div.workspace-leaf {
 text-decoration: underline;
 }
 
-
-
-
-/* increase room for tab title */
-
-.mod-root.workspace-split.mod-vertical > div.workspace-leaf .view-actions{
-padding: 4px 0px;
-}
-
-.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active .view-actions{
-padding: 4px 10px;
-}
 
 
 
