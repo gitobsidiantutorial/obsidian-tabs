@@ -161,7 +161,7 @@ text-decoration: underline;
 .mod-root.workspace-split.mod-vertical { counter-reset: tab; }
 .mod-root.workspace-split.mod-vertical > div.workspace-leaf .view-header-title::before{
 counter-increment: tab;
-content: counter(tab)!important;
+content: counter(tab);
 padding-top: 2px;
 display: inline-block;
 height: 40px;
@@ -174,8 +174,8 @@ background-color: var(--background-secondary-alt); /* change to appealing colour
 display: none;
 }
 
-.mod-root.workspace-split.mod-vertical > div.workspace-leaf:last-of-type .view-header-title::before {
-display: inline-block!important;
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf:nth-of-type(n+9):last-of-type .view-header-title::before {
+display: inline-block;
 content: "9";
 }
 
