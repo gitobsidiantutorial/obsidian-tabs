@@ -1,0 +1,21 @@
+.mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.mod-active .view-header-icon,
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active .view-header-icon {
+    background-color: transparent!important;
+}
+
+.mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.mod-active .view-header-title::before,
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active .view-header-title::before {
+    background-color: transparent!important;
+}
+
+.mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf > .workspace-leaf-content > .view-header .view-header-title::before,
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf > .workspace-leaf-content > .view-header .view-header-title::before{
+    background-color: transparent!important;
+}
+
+.mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf,
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf{ 
+border-radius: 0px 0px 0px 0px!important; /* adds a slight rounding to the top corners of a pane header - NOT ESSENTIAL */
+border:0!important; 
+border-bottom: 1px solid var(--background-modifier-border)!important; /* adds a slight outline to the tab header - NOT ESSENTIAL */
+}
