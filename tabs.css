@@ -17,7 +17,6 @@ min-width: var(--w1);
 max-width: var(--w2);
 }
 
-
 .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical,
 .mod-root.workspace-split.mod-vertical{ 
 overflow-x: hidden; 
@@ -43,7 +42,6 @@ border: 1px solid var(--background-modifier-border); /* adds a slight outline to
 .mod-root.workspace-split.mod-vertical > .workspace-split.mod-vertical > div.workspace-leaf .view-header,
 .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active .view-header{border-left: 1px solid var(--background-modifier-border) } /* adds a slight outline to the main window header - NOT ESSENTIAL */
 
-
 .mod-root.workspace-split.mod-vertical div .view-header{ 
 border-top: 0;
 }
@@ -51,15 +49,12 @@ border-top: 0;
 border-bottom: 0;
 }
 
-
 .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.mod-active,
 .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active { 
 border-left: 0;
 border-top: 0;
 border-bottom: 0;
 }
-
-
 
 /* set active pane below tab bar */
 .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.mod-active,
@@ -73,7 +68,6 @@ width: 100%;
 }
 
 /* compatibility with maximise pane plugin */
-
 .mod-root.workspace-split.mod-vertical.maximised  div.workspace-leaf.mod-active {
 height: 100%!important;
 top: 0px;
@@ -82,14 +76,12 @@ border-top: 1px solid var(--background-modifier-border);
 }
 .maximised .view-header {height: var(--headerheight);  }
 
-
 .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf:only-of-type,
 .mod-root.workspace-split.mod-vertical > div.workspace-leaf:only-of-type { /*if only one pane open, maximise*/
 top: 0px;
 bottom: 0px;
 height: 100%!important;
 }
-
 
 .mod-root.workspace-split.mod-vertical .workspace-leaf .view-header { 
 height: calc(var(--headerheight) + 3px);
@@ -137,6 +129,7 @@ display: none
 .mod-root.workspace-split.mod-vertical > div.workspace-leaf .view-actions{
 padding: 4px 0px;
 }
+
 .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.mod-active .view-actions,
 .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active .view-actions{
 padding: 4px 10px;
@@ -146,7 +139,6 @@ padding: 4px 10px;
 .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf .view-header-title,
 .mod-root > div.workspace-leaf .view-header-title{
 font-size: 14px;
-
 }
 
 .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.mod-active .view-header-title,
@@ -170,6 +162,7 @@ font-size: inherit;
 .mod-root.workspace-split.mod-vertical > div.workspace-leaf a[aria-label="More options"]{
 display: none;
 }
+
 .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.mod-active a[aria-label="Edit (Ctrl/Cmd+Click to edit in new pane)"],
 .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.mod-active .view-header-icon,
 .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.mod-active a[aria-label="Preview (Ctrl/Cmd+Click to open in new pane)"],
@@ -180,7 +173,6 @@ display: none;
 .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active a[aria-label="More options"]{
 display: block;
 }
-
 
 
 /* Pane relief specific options */
@@ -203,7 +195,6 @@ text-decoration: underline;
 
 .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > .workspace-leaf:nth-of-type(n+9)  .view-header-title,
 .mod-root.workspace-split.mod-vertical > .workspace-leaf:nth-of-type(n+9)  .view-header-title {padding-left: 5px} /* intentionally less specific, so it gets overridden */
-
 
 .mod-root.workspace-split.mod-vertical { counter-reset: tab; }
 
