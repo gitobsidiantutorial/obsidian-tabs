@@ -15,18 +15,24 @@
 
 .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf:not(.mod-active),
 .mod-root.workspace-split.mod-vertical > div.workspace-leaf:not(.mod-active){ 
-border-radius: 0px 0px 0px 0px!important; /* adds a slight rounding to the top corners of a pane header - NOT ESSENTIAL */
+border-radius: 0px 0px 0px 0px!important;
 border:0!important; 
-border-bottom: 1px solid var(--background-modifier-border)!important; /* adds a slight outline to the tab header - NOT ESSENTIAL */
+border-bottom: 1px solid var(--background-modifier-border)!important;
 }
 
-.mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf:not(.mod-active):last-of-type,
-.mod-root.workspace-split.mod-vertical > div.workspace-leaf:not(.mod-active):last-of-type{ 
-border-right: 1px solid var(--background-modifier-border)!important; /* adds a slight outline to the tab header - NOT ESSENTIAL */
+.mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf:not(.mod-active),
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf:not(.mod-active){ 
+border-right: 1px solid var(--background-modifier-border)!important;
 }
 
 .mod-root.workspace-split.mod-vertical .workspace-split.mod-horizontal > .workspace-leaf:nth-of-type(n+1) {
     border-radius: 0px 0px 0px 0px;
-    border-bottom: 0important;
+    border-bottom: 0!important;
     border-top: 0!important;
+    border-left: 1px solid var(--background-modifier-border)!important;
+}
+
+.mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.mod-active,
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active {
+border: 0;
 }
