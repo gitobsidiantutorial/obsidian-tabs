@@ -57,3 +57,10 @@ Comment out or remove optional sections of the snippet if they do not apply to y
 
 ##### Using split view
 Split the only pane of a one pane workspace horizontally. Split the left pane (you can split the right one if you're not using the pane relief plugin) vertically.
+
+
+#### Theme compatibility
+Please notify me through the [issues feature](https://github.com/gitobsidiantutorial/obsidian-tabs/issues) whether a theme conflicts with the css of this snippet. If I can find an easy solution, I will share a compatch as an extra snippet which must also be enabled when using that theme.
+
+##### Minimal Theme by Kepano
+[Compatch available](https://raw.githubusercontent.com/gitobsidiantutorial/obsidian-tabs/main/compatch_minimal_theme.css)
