@@ -191,9 +191,9 @@ text-decoration: underline;
 
 /* tab numbers (useful for pane relief shortcuts) */
 .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf                   .view-header-title-container,
-.mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf:last-of-type      .view-header-title-container,
+.mod-root.workspace-split.mod-vertical > .workspace-split.mod-vertical > div.workspace-leaf:last-of-type      .view-header-title-container,
 .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf                   .view-header-title,
-.mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf:last-of-type      .view-header-title,
+.mod-root.workspace-split.mod-vertical > .workspace-split.mod-vertical > div.workspace-leaf:last-of-type      .view-header-title,
 .mod-root.workspace-split.mod-vertical > div.workspace-leaf                   .view-header-title,
 .mod-root.workspace-split.mod-vertical > div.workspace-leaf:last-of-type      .view-header-title,
 .mod-root.workspace-split.mod-vertical > div.workspace-leaf                   .view-header-title-container, 
@@ -243,7 +243,7 @@ padding-right: 5px;
 background-color: var(--background-secondary-alt); /* make background of icon the same as the tab numbering */
 }
 
-.mod-root.workspace-split.mod-vertical > .workspace-split.mod-horizontal > div.workspace-leaf.mod-active:nth-child(n+10) .view-header-icon,
+.mod-root.workspace-split.mod-vertical > .workspace-split.mod-horizontal div.workspace-leaf.mod-active:nth-child(n+10) .view-header-icon,
 .mod-root.workspace-split.mod-vertical > .workspace-split.mod-vertical > div.workspace-leaf.mod-active:nth-child(n+10):not(:last-child) .view-header-icon,
 .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active:nth-child(n+10):not(:last-child) .view-header-icon {
 padding-right: 10px;
