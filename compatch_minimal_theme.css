@@ -34,5 +34,6 @@ border-right: 1px solid var(--background-modifier-border)!important;
 
 .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.mod-active,
 .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active {
-border: 0;
+border: 0!important;
+border-radius: 0px 0px 0px 0px!important;
 }
