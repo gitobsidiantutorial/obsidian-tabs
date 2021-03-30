@@ -24,3 +24,9 @@ border-bottom: 1px solid var(--background-modifier-border)!important; /* adds a 
 .mod-root.workspace-split.mod-vertical > div.workspace-leaf:not(.mod-active):last-of-type{ 
 border-right: 1px solid var(--background-modifier-border)!important; /* adds a slight outline to the tab header - NOT ESSENTIAL */
 }
+
+.mod-root.workspace-split.mod-vertical .workspace-split.mod-horizontal > .workspace-leaf:nth-of-type(n+1) {
+    border-radius: 0px 0px 0px 0px;
+    border-bottom: 0important;
+    border-top: 0!important;
+}
