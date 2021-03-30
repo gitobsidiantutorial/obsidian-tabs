@@ -263,4 +263,4 @@ border-left-width: 2px;
 border-top-width: 2px
 }
 
-.mod-root.workspace-split.mod-vertical div.workspace-leaf-content[data-type="backlink"] .view-header-title {padding-left: 5px}
+.mod-root.workspace-split.mod-vertical div.workspace-leaf-content[data-type="backlink"] .view-header-title {padding-left: 5px!important}
