@@ -1,3 +1,4 @@
+/* If an optional feature is not desired remove all of the css after the optional feature title until the next feature title */
 /* REQUIRED */
 .mod-root.workspace-split.mod-vertical{
 --rows : 1;/*1 for default view, 2 for 2 row view*/
@@ -106,7 +107,7 @@ display:none;
 
 /* non pane relief options */
 
-/* vertical side-by-side view */
+/* optional feature vertical side-by-side view */
 .mod-root.workspace-split.mod-vertical .workspace-split.mod-horizontal{
 flex-direction: row;
 }
@@ -130,7 +131,7 @@ border-left: 0;
 display: none
 }
 
-/* increase room for tab title */
+/* optional feature increase room for tab title */
 .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf .view-actions,
 .mod-root.workspace-split.mod-vertical > div.workspace-leaf .view-actions{
 padding: 4px 0px;
@@ -140,7 +141,7 @@ padding: 4px 0px;
 padding: 4px 10px;
 }
 
-/* smaller tab titles */
+/* optional feature smaller tab titles */
 .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf .view-header-title,
 .mod-root > div.workspace-leaf .view-header-title{
 font-size: 14px;
@@ -157,7 +158,7 @@ font-size: inherit;
 font-size: inherit;
 }
 
-/* hide header button, more options, and edit button on tabs */
+/* optional feature hide header button, more options, and edit button on tabs */
 .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf a[aria-label="Edit (Ctrl/Cmd+Click to edit in new pane)"],
 .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf .view-header-icon,
 .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf a[aria-label="Preview (Ctrl/Cmd+Click to open in new pane)"],
@@ -183,13 +184,13 @@ display: block;
 
 /* Pane relief specific options */
 
-/* underline next tab [pane relief cycle to next pane hotkey] */
+/* optional feature underline next tab [pane relief cycle to next pane hotkey] */
 .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.mod-active + div.workspace-leaf,
 .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active + div.workspace-leaf {
 text-decoration: underline;
 }
 
-/* tab numbers (useful for pane relief shortcuts) */
+/* optional feature tab numbers (useful for pane relief shortcuts) */
 .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf                   .view-header-title-container,
 .mod-root.workspace-split.mod-vertical > .workspace-split.mod-vertical > div.workspace-leaf:last-of-type      .view-header-title-container,
 .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf                   .view-header-title,
