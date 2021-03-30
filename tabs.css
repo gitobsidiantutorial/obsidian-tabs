@@ -206,8 +206,8 @@ text-decoration: underline;
 
 .mod-root.workspace-split.mod-vertical { counter-reset: tab; }
 
-.mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf .view-header-title::before,
-.mod-root.workspace-split.mod-vertical > div.workspace-leaf .view-header-title::before{
+.mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf > .workspace-leaf-content > .view-header .view-header-title::before,
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf > .workspace-leaf-content > .view-header .view-header-title::before{
 counter-increment: tab;
 content: counter(tab);
 padding-top: 2px;
@@ -218,13 +218,13 @@ padding: 0 0.4em;
 background-color: var(--background-secondary-alt); /* change to appealing colours in your theme */
 }
 
-.mod-root.workspace-split.mod-vertical div.workspace-split.mod-vertical > div.workspace-leaf:nth-of-type(n+9) .view-header-title::before,
-.mod-root.workspace-split.mod-vertical > div.workspace-leaf:nth-of-type(n+9) .view-header-title::before {
+.mod-root.workspace-split.mod-vertical div.workspace-split.mod-vertical > div.workspace-leaf:nth-of-type(n+9)  > .workspace-leaf-content > .view-header .view-header-title::before,
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf:nth-of-type(n+9)  > .workspace-leaf-content > .view-header .view-header-title::before {
 display: none;
 }
 
-.mod-root.workspace-split.mod-vertical > div.workspace-split.mod-vertical > div.workspace-leaf:nth-of-type(n+9):last-of-type .view-header-title::before,
-.mod-root.workspace-split.mod-vertical > div.workspace-leaf:nth-of-type(n+9):last-of-type .view-header-title::before {
+.mod-root.workspace-split.mod-vertical > div.workspace-split.mod-vertical > div.workspace-leaf:nth-of-type(n+9):last-of-type  > .workspace-leaf-content > .view-header .view-header-title::before,
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf:nth-of-type(n+9):last-of-type  > .workspace-leaf-content > .view-header .view-header-title::before {
 display: inline-block;
 content: "9";
 }
@@ -262,3 +262,5 @@ padding-right: 10px;
 border-left-width: 2px;
 border-top-width: 2px
 }
+
+.mod-root.workspace-split.mod-vertical div.workspace-leaf-content[data-type="backlink"] .view-header-title {padding-left: 5px}
