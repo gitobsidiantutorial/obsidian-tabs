@@ -26,7 +26,7 @@ Tabbed mode is made to be used in unison with the [pane relief plugin](https://g
 
  - The next tab to be brought up by ctrl+tab is the underlined tab. Inversely, the tab to the left of the underlined tab is the tab brought into focus by ctrl+shift+tab. (optional)
 
-- Side by side view [demo](https://i.imgur.com/uQ7L8Jt.mp4) and [instructions](#using-split-view)
+- Side by side view \[[demo](https://i.imgur.com/uQ7L8Jt.mp4) and [instructions](#using-split-view)\]
 
 
 #### Issues:
