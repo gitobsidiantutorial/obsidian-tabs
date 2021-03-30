@@ -54,4 +54,4 @@ Comment out or remove optional sections of the snippet if they do not apply to y
 [Visual guide to snippet usage.](https://i.imgur.com/aB3eMRn.mp4)
 
 ##### Using split view
-Split the only pane of a one workspace horizontally. Split the left pane (you can split the right one if you're not using the pane relief plugin) vertically.
+Split the only pane of a one pane workspace horizontally. Split the left pane (you can split the right one if you're not using the pane relief plugin) vertically.
