@@ -14,15 +14,13 @@ Tabbed mode is made to be used in unison with the [pane relief plugin](https://g
 
 - Click on tab to bring in focus
 
-- Numbering of tabs for usage with the pane relief jump to pane number hotkeys (up to 20)
+- Numbering of tabs for usage with the pane relief jump to pane number hotkeys
 
 - Automatic hiding of the tab bar when only one pane is open
 
 - Fully compatible with the maximise pane plugin 
 
 - Smaller tab styling relative to main pane (optional)
-
-- Maximum width left aligned tabs (optional)
 
 - Hide buttons on unfocused tabs for more title visibility (optional)
 
