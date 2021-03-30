@@ -41,6 +41,8 @@ Tabbed mode is made to be used in unison with the [pane relief plugin](https://g
 
 - Multiple tabbed panes side by side is possible, but not very useful due to the auto-collapsing behaviour described above
 
+- The backlinks in pane plugin causes strange behaviour with Pane Relief. This is not cause by the css.
+
 
 
 #### Usage:
