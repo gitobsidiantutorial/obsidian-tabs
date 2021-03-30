@@ -176,8 +176,8 @@ display: block;
 /* Pane relief specific options */
 
 /* optional feature underline next tab [pane relief cycle to next pane hotkey] */
-.mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.mod-active + div.workspace-leaf,
-.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active + div.workspace-leaf {
+.mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.mod-active + div.workspace-leaf .view-header-title ,
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active + div.workspace-leaf .view-header-title {
 text-decoration: underline;
 }
 
