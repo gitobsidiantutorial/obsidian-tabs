@@ -54,8 +54,9 @@ border-bottom: 0;
 
 .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.mod-active,
 .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active { 
-border-radius: 0; /* no rounding for main pane - NOT ESSENTIAL */
-border: 0;
+border-left: 0;
+border-top: 0;
+border-bottom: 0;
 }
 
 
