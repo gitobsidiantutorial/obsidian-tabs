@@ -28,14 +28,21 @@ Tabbed mode is made to be used in unison with the [pane relief plugin](https://g
 
  - The next tab to be brought up by ctrl+tab is the underlined tab. Inversely, the tab to the left of the underlined tab is the tab brought into focus by ctrl+shift+tab. (optional)
 
+- Side by side view [demo](https://i.imgur.com/uQ7L8Jt.mp4) and [instructions](#using-split-view)
+
 
 #### Issues:
 
 - When the last pane is focused on, **no** tabs are underlined. The tab that will be focused on by pressing ctrl+tab is the left-most one.
 
-- Doesn't work with split view.
+- Doesn't work with split view. [partially fixed!] A tab still cannot be horizontally split however.
 
 - The focused tab doesn't appear in the tab overview, hence the underlining workaround to clarify its relative position.
+
+- When in side-by-side view, focusing on the side tab shrinks the tabbed views. This issue cannot be fixed purely with css, unfortunately.
+
+- Multiple tab views side by side is possible, but not very useful due to the auto-collapsing behaviour described above
+
 
 
 #### Usage:
@@ -45,3 +52,6 @@ I recommend saving the snippet with a number or underscore in the front, so you 
 Comment out or remove optional sections of the snippet if they do not apply to your use case.
 
 [Visual guide to snippet usage.](https://i.imgur.com/aB3eMRn.mp4)
+
+##### Using split view
+Split the only pane of a one workspace horizontally. Split the left pane (you can split the right one if you're not using the pane relief plugin) vertically.
