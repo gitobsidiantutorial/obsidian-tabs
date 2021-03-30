@@ -202,9 +202,12 @@ counter-increment: tab;
 content: counter(tab);
 padding-top: 2px;
 display: inline-block;
-height: 40px;
+height: 100%;
 margin-right: 5px;
 padding: 0 0.4em;
+width: auto; /* compatibility with mininal */
+vertical-align: baseline; /* compatibility with mininal */
+position: static; /* compatibility with mininal */
 background-color: var(--background-secondary-alt); /* change to appealing colours in your theme */
 }
 
