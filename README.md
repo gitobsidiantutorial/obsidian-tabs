@@ -39,7 +39,7 @@ Tabbed mode is made to be used in unison with the [pane relief plugin](https://g
 
 - The focused tab doesn't appear in the tab overview, hence the underlining workaround to clarify its relative position.
 
-- When in side-by-side view, focusing on the side tab shrinks the tabbed views. This issue cannot be fixed purely with css, unfortunately.
+- When in side-by-side view, focusing on the side tab shrinks the tabbed pane. This issue cannot be fixed purely with css, unfortunately.
 
 - Multiple tab views side by side is possible, but not very useful due to the auto-collapsing behaviour described above
 
