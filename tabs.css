@@ -45,9 +45,7 @@ border: 1px solid var(--background-modifier-border); /* adds a slight outline to
 .mod-root.workspace-split.mod-vertical div .view-header{ 
 border-top: 0;
 }
-.mod-root.workspace-split.mod-vertical div:not(.mod-active) .view-header{ 
-border-bottom: 0;
-}
+
 
 .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.mod-active,
 .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active { 
