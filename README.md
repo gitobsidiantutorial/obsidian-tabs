@@ -58,6 +58,10 @@ Comment out or remove optional sections of the snippet if they do not apply to y
 ##### Using split view
 Split the only pane of a one pane workspace horizontally. Split the left pane (you can split the right one if you're not using the pane relief plugin) vertically.
 
+[Example of split view usage](https://i.imgur.com/lStwTNI.mp4). A tab has been linked to the pane on the right, to make changing its contents easier. The maximise pane plugin is used when only one document needs focusing on.
+
+[Adjusting the the size of the reference panes](https://i.imgur.com/5GCrNHU.mp4). Disable the snippet, adjust the horizontal splits, and then re-enable the snippet.
+
 
 #### Theme compatibility
 Please notify me through the [issues feature](https://github.com/gitobsidiantutorial/obsidian-tabs/issues) whether a theme conflicts with the css of this snippet. If I can find an easy solution, I will share a compatch as an extra snippet which must also be enabled when using that theme.
