@@ -28,6 +28,8 @@ Tabbed mode is made to be used in unison with the [pane relief plugin](https://g
 
 - Side by side view \[[demo](https://i.imgur.com/uQ7L8Jt.mp4) and [instructions](#using-split-view)\]
 
+- Ongoing efforts to maximise [theme compatibility](theme-compatibility) through compatches.
+
 
 #### Issues:
 
