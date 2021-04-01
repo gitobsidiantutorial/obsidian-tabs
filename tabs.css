@@ -15,6 +15,11 @@ flex-grow: 1;
 flex-shrink: 1;
 min-width: var(--w1);
 max-width: var(--w2);
+
+height: var(--headerheight); 
+border-radius: 10px 10px 0px 0px; /* adds a slight rounding to the top corners of a pane header - NOT ESSENTIAL */
+border: 1px solid var(--background-modifier-border); /* adds a slight outline to the tab header - NOT ESSENTIAL */
+border-bottom: 0;
 }
 
 .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical,
@@ -22,7 +27,7 @@ max-width: var(--w2);
 overflow-x: hidden; 
 flex-direction: row;
 flex-wrap: wrap;
-align-content: flex-end;
+align-content: flex-start;
 align-items: stretch;
 overflow-y: auto; /* no second scrollbar should be visible, if one appears, then I've made a mistake */
 }
@@ -31,14 +36,6 @@ overflow-y: auto; /* no second scrollbar should be visible, if one appears, then
 height: 100%;
 }
 
-/* turns inactive panes into tabs*/
-.mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf,
-.mod-root.workspace-split.mod-vertical > div.workspace-leaf {
-height: var(--headerheight); 
-border-radius: 10px 10px 0px 0px; /* adds a slight rounding to the top corners of a pane header - NOT ESSENTIAL */
-border: 1px solid var(--background-modifier-border); /* adds a slight outline to the tab header - NOT ESSENTIAL */
-border-bottom: 0;
-}
 
 .mod-root.workspace-split.mod-vertical > .workspace-split.mod-vertical > div.workspace-leaf .view-header,
 .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active .view-header{border-left: 1px solid var(--background-modifier-border) } /* adds a slight outline to the main window header - NOT ESSENTIAL */
@@ -65,6 +62,7 @@ min-width: 100%;
 min-height: calc(100% - var(--headerheight) * var(--rows));
 overflow-y: hidden;
 width: 100%;
+padding-right: 1px;
 }
 
 /* compatibility with maximise pane plugin */
