@@ -1,0 +1,51 @@
+.mod-root.workspace-split.mod-vertical div.workspace-leaf{
+padding-right: 0px!important
+}
+
+.mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf, .mod-root.workspace-split.mod-vertical > div.workspace-leaf {
+    border: 1px solid var(--background-secondary-alt)!important;
+}
+
+.mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.mod-active .view-header-icon,
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active .view-header-icon {
+    background-color: transparent!important;
+}
+
+.mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.mod-active .view-header-title::before,
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active .view-header-title::before {
+    background-color: transparent!important;
+}
+
+.mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf > .workspace-leaf-content > .view-header .view-header-title::before,
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf > .workspace-leaf-content > .view-header .view-header-title::before{
+    background-color: transparent!important;
+}
+
+.mod-root.workspace-split.mod-vertical > .workspace-split.mod-vertical > div.workspace-leaf .view-header, .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active .view-header {
+    border-left: 0px solid var(--background-modifier-border)!important;
+}
+
+.mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf:not(.mod-active),
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf:not(.mod-active){ 
+border-right: 1px solid var(--background-secondary-alt)!important;
+border-radius: 5px 5px 0px 0px!important;
+}
+
+.mod-root.workspace-split.mod-vertical .workspace-split.mod-horizontal > .workspace-leaf:nth-of-type(n+1) {
+    border-radius: 5px 0px 0px 0px!important;
+    border-bottom: 0!important;
+    border-top: 0!important;
+}
+
+.mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.mod-active,
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active {
+border: 0!important;
+border-top: 1px solid var(--background-secondary-alt)!important;
+border-radius: 0px 0px 0px 0px!important;
+}
+
+.mod-root.workspace-split.mod-vertical .workspace-split.mod-horizontal hr.workspace-leaf-resize-handle {
+background-color: transparent;
+color: transparent;
+width: 0;
+}
