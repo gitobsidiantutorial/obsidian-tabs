@@ -70,3 +70,5 @@ Please notify me through the [issues feature](https://github.com/gitobsidiantuto
 
 - Minimal Theme by Kepano
   - [Compatch available](https://raw.githubusercontent.com/gitobsidiantutorial/obsidian-tabs/main/compatch_minimal_theme.css)
+- Cybertron Theme by Nickmilo
+  - [Compatch available](https://raw.githubusercontent.com/gitobsidiantutorial/obsidian-tabs/main/compatch_cybertron_theme.css)
