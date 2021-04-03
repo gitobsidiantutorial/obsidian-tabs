@@ -45,7 +45,7 @@ Tabbed mode is made to be used in unison with the [pane relief plugin](https://g
 
 - The order of operations must be respected when setting a split view, it is not possible to create split view when already in tabbed mode.
 
-- The backlinks in pane plugin causes strange behaviour with Pane Relief. This is not cause by the css.
+- The backlinks in pane plugin causes strange behaviour with Pane Relief. This is not caused by the css.
 
 
 
