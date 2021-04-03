@@ -62,7 +62,7 @@ Split the only pane of a one pane workspace horizontally. Split the left pane (y
 
 [Example of split view usage](https://i.imgur.com/lStwTNI.mp4). A tab has been linked to the pane on the right, to make changing its contents easier. The maximise pane plugin is used when only one document needs focusing on.
 
-[Adjusting the the size of the reference panes](https://i.imgur.com/5GCrNHU.mp4). Disable the snippet, adjust the horizontal splits, and then re-enable the snippet.
+[Creating and adjusting the the size of the reference panes](https://i.imgur.com/OrYwROt.mp4). Disable the snippet, adjust the horizontal splits, and then re-enable the snippet.
 
 
 #### Theme compatibility
