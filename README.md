@@ -6,7 +6,7 @@ Opening a document in a new pane (ctrl+click) instead activates tabbed view. One
 
 Tabbed mode is made to be used in unison with the [pane relief plugin](https://github.com/pjeby/pane-relief), in particular the _cycle to workspace pane_ hotkeys, and the [maximise pane plugin](https://github.com/deathau/maximise-active-pane-obsidian), but can certainly be used without.
 
-![Logo|height=30](https://ko-fi.com/img/Kofi_Logo_Blue.svg "Ko-fi logo")
+<img src="https://ko-fi.com/img/Kofi_Logo_Blue.svg" height="40px" />
 
 #### Features: 
 
