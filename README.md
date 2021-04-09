@@ -4,21 +4,20 @@ Opening a document in a new pane (ctrl+click) instead activates tabbed view. One
 
 [Watch the demo.](https://i.imgur.com/7V0m2Ub.mp4)
 
-
-[Get the snippet.](https://raw.githubusercontent.com/gitobsidiantutorial/obsidian-tabs/main/tabs.css)
-
 Tabbed mode is made to be used in unison with the [pane relief plugin](https://github.com/pjeby/pane-relief), in particular the _cycle to workspace pane_ hotkeys, and the [maximise pane plugin](https://github.com/deathau/maximise-active-pane-obsidian), but can certainly be used without.
 
 
 #### Features: 
 
-- Click on tab to bring in focus
+- Click on tab to bring in focus.
 
-- Numbering of tabs for usage with the pane relief jump to pane number hotkeys
+- Numbering of tabs for usage with the pane relief jump to pane number hotkeys.
 
 - Automatic hiding of the tab bar when only one pane is open
 
 - Fully compatible with the [maximise pane plugin](https://github.com/deathau/maximise-active-pane-obsidian)
+
+- When sufficient tabs have been opened, a (https://i.imgur.com/iZJ5byx.mp4)[second row can be opened].
 
 - Smaller tab styling relative to main pane (optional)
 
@@ -26,7 +25,7 @@ Tabbed mode is made to be used in unison with the [pane relief plugin](https://g
 
  - The next tab to be brought up by ctrl+tab is the underlined tab. Inversely, the tab to the left of the underlined tab is the tab brought into focus by ctrl+shift+tab. (optional)
 
-- Side by side view \[[demo](https://i.imgur.com/uQ7L8Jt.mp4) and [instructions](#using-split-view)\]
+- Side by side view \[[demo](https://raw.githubusercontent.com/gitobsidiantutorial/obsidian-tabs/main/vids/horizontalconfigure.webp) and [instructions](#using-split-view)\]
 
 - Ongoing efforts to maximise [theme compatibility](theme-compatibility) through compatches.
 
@@ -35,17 +34,13 @@ Tabbed mode is made to be used in unison with the [pane relief plugin](https://g
 
 - When the last pane is focused on, **no** tabs are underlined. The tab that will be focused on by pressing ctrl+tab is the left-most one.
 
-- Doesn't work with split view. [partially fixed!] A tab still cannot be horizontally split however.
+- A tab cannot be horizontally split.
 
-- The focused tab doesn't appear in the tab overview, hence the underlining workaround to clarify its relative position.
-
-- When in side-by-side view, focusing on the side tab shrinks the tabbed pane. This issue cannot be fixed purely with css, unfortunately.
-
-- Multiple tabbed panes side by side is possible, but not very useful due to the auto-collapsing behaviour described above
+- The focused tab is taken out of the tab overview.
 
 - The order of operations must be respected when setting a split view, it is not possible to create split view when already in tabbed mode.
 
-- The backlinks in pane plugin causes strange behaviour with Pane Relief. This is not caused by the css.
+- The backlinks in pane plugin causes unintended behaviour with Pane Relief. This is not caused by this plugin.
 
 
 
@@ -58,11 +53,11 @@ Comment out or remove optional sections of the snippet if they do not apply to y
 [Visual guide to snippet usage.](https://i.imgur.com/aB3eMRn.mp4)
 
 ##### Using split view
-Split the only pane of a one pane workspace horizontally. Split the left pane (you can split the right one if you're not using the pane relief plugin) vertically.
+![video](https://raw.githubusercontent.com/gitobsidiantutorial/obsidian-tabs/main/vids/horizontalconfigure.webp)
+
+Split the only pane of a one pane workspace horizontally. Split the left pane (you can split the right one if you're not using the pane relief plugin) vertically. Enable **Horizontal Splits** in the plugin settings to resize the panes in proportion to each other. After adjusting the pane size, you can disable the setting to resume vertical splitting.
 
 [Example of split view usage](https://i.imgur.com/lStwTNI.mp4). A tab has been linked to the pane on the right, to make changing its contents easier. The maximise pane plugin is used when only one document needs focusing on.
-
-[Creating and adjusting the the size of the reference panes](https://i.imgur.com/OrYwROt.mp4). Disable the snippet, adjust the horizontal splits, and then re-enable the snippet.
 
 
 #### Theme compatibility
