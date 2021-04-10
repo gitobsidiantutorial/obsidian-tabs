@@ -213,21 +213,21 @@ text-decoration: underline;
 }
 
 /* optional feature tab numbers (useful for pane relief shortcuts) */
-body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf                   .view-header-title-container,
-body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > .workspace-split.mod-vertical > div.workspace-leaf:last-of-type      .view-header-title-container,
-body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf                   .view-header-title,
+body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical:first-of-type > div.workspace-leaf                   .view-header-title-container,
+body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical:first-of-type > div.workspace-leaf:last-of-type      .view-header-title-container,
+body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > .workspace-split.mod-vertical > div.workspace-leaf                   .view-header-title,
 body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > .workspace-split.mod-vertical > div.workspace-leaf:last-of-type      .view-header-title,
 body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf                   .view-header-title,
 body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf:last-of-type      .view-header-title,
 body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf                   .view-header-title-container, 
 body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf:last-of-type      .view-header-title-container {padding-left: 0px}
 
-body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > .workspace-leaf:nth-of-type(n+9)  .view-header-title,
+body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical:first-of-type > .workspace-leaf:nth-of-type(n+9)  .view-header-title,
 body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > .workspace-leaf:nth-of-type(n+9)  .view-header-title {padding-left: 5px} /* intentionally less specific, so it gets overridden */
 
 body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical { counter-reset: tab; }
 
-body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf > .workspace-leaf-content > .view-header .view-header-title::before,
+body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical:first-of-type > div.workspace-leaf > .workspace-leaf-content > .view-header .view-header-title::before,
 body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf > .workspace-leaf-content > .view-header .view-header-title::before{
 counter-increment: tab;
 content: counter(tab);
@@ -242,29 +242,29 @@ position: static; /* compatibility with mininal */
 background-color: var(--background-secondary-alt); /* change to appealing colours in your theme */
 }
 
-body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical div.workspace-split.mod-vertical > div.workspace-leaf:nth-of-type(n+9)  > .workspace-leaf-content > .view-header .view-header-title::before,
+body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical div.workspace-split.mod-vertical:first-of-type > div.workspace-leaf:nth-of-type(n+9)  > .workspace-leaf-content > .view-header .view-header-title::before,
 body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf:nth-of-type(n+9)  > .workspace-leaf-content > .view-header .view-header-title::before {
 display: none;
 }
 
-body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-split.mod-vertical > div.workspace-leaf:nth-of-type(n+9):last-of-type  > .workspace-leaf-content > .view-header .view-header-title::before,
+body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-split.mod-vertical:first-of-type > div.workspace-leaf:nth-of-type(n+9):last-of-type  > .workspace-leaf-content > .view-header .view-header-title::before,
 body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf:nth-of-type(n+9):last-of-type  > .workspace-leaf-content > .view-header .view-header-title::before {
 display: inline-block;
 content: "9";
 }
 
-body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.stayopen .view-header-title::before,
+body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical:first-of-type > div.workspace-leaf.stayopen .view-header-title::before,
 body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf.stayopen .view-header-title::before,
-body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.mod-active .view-header-title::before,
+body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical:first-of-type > div.workspace-leaf.mod-active .view-header-title::before,
 body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active .view-header-title::before {
 color: var(--text-muted); /* change to appealing colour in your theme */
 background-color: var(--background-secondary-alt);
 margin-left: -0.3em;
 }
 
-body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.stayopen .view-header-icon,
+body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical:first-of-type > div.workspace-leaf.stayopen .view-header-icon,
 body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf.stayopen .view-header-icon,
-body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.mod-active .view-header-icon,
+body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical:first-of-type > div.workspace-leaf.mod-active .view-header-icon,
 body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active .view-header-icon {
 top: 0;
 padding-top: 6px;
@@ -273,10 +273,10 @@ background-color: var(--background-secondary-alt); /* make background of icon th
 }
 
 body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > .workspace-split.mod-horizontal div.workspace-leaf.stayopen:nth-child(n+10) .view-header-icon,
-body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > .workspace-split.mod-vertical > div.workspace-leaf.stayopen:nth-child(n+10):not(:last-child) .view-header-icon,
+body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical:first-of-type > div.workspace-leaf.stayopen:nth-child(n+10):not(:last-child) .view-header-icon,
 body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf.stayopen:nth-child(n+10):not(:last-child) .view-header-icon,
 body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > .workspace-split.mod-horizontal div.workspace-leaf.mod-active:nth-child(n+10) .view-header-icon,
-body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > .workspace-split.mod-vertical > div.workspace-leaf.mod-active:nth-child(n+10):not(:last-child) .view-header-icon,
+body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical:first-of-type > div.workspace-leaf.mod-active:nth-child(n+10):not(:last-child) .view-header-icon,
 body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active:nth-child(n+10):not(:last-child) .view-header-icon {
 padding-right: 10px;
 }
