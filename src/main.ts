@@ -7,10 +7,7 @@ async onload() {
   this.addSettingTab(new TabSettingTab(this.app, this));
   this.registerEvent(this.app.workspace.on('layout-change', this.handleTabs));
   this.registerEvent(this.app.workspace.on('active-leaf-change', this.handleOpen));
-  this.updateStyle();
   this.refresh();
-  this.handleOpen;
-  this.handleTabs;
 };
 
 removeStyle() {
@@ -29,12 +26,18 @@ updateStyle() {
     document.body.classList.toggle('compact-title', this.settings.CompactTitle);
     document.body.classList.toggle('tab-numbering', this.settings.TabNumbering);
     document.body.classList.toggle('tab-underline', this.settings.TabUnderline);
+    if (this.settings.HeaderHeight == null || Number.isNaN(this.settings.HeaderHeight)) {
+    document.querySelector(':root').style.setProperty('--headerheight','29px');
+    }
+    else {
     document.querySelector(':root').style.setProperty('--headerheight', this.settings.HeaderHeight+'px');
+    }
   };
 
 refresh() {
   // re-load the style
-  this.updateStyle()
+  this.updateStyle();
+  this.handleTabs();
   };
 
 //remove class when plugin is disabled
