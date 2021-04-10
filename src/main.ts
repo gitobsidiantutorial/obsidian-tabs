@@ -1,33 +1,24 @@
 import { Plugin, App, Workspace, PluginSettingTab, Setting } from "obsidian";
-
 export default class TabbedView extends Plugin {
-
-
+settings: TabSettings;
 
 async onload() {
   this.settings = await this.loadData() || new TabSettings();
   this.addSettingTab(new TabSettingTab(this.app, this));
   this.registerEvent(this.app.workspace.on('layout-change', this.handleTabs));
   this.registerEvent(this.app.workspace.on('active-leaf-change', this.handleOpen));
-  this.addStyle();
-  this.refresh()  
+  this.updateStyle();
+  this.refresh();
+  this.handleOpen;
+  this.handleTabs;
 };
 
-addStyle() {
-  // add a css block for our settings-dependent styles
-  const css = document.createElement('style');
-  css.id = 'minimal-theme';
-  document.getElementsByTagName("head")[0].appendChild(css);
-
-  // update the style with the settings-dependent styles
-  this.updateStyle();
-}
-
-
-
 removeStyle() {
-  document.body.removeClass('minimal-light','minimal-light-tonal','minimal-light-contrast','minimal-light-white','minimal-dark','minimal-dark-tonal','minimal-dark-black');
-}
+  document.body.removeClass('rowoverflow','horizontal-to-vertical','hide-buttons','small-title','compact-title','tab-numbering','tab-underline');
+  document.querySelector(':root').style.removeProperty('--headerheight');
+  document.querySelector(':root').style.removeProperty('--jstabs');
+  document.querySelector(':root').style.removeProperty('--rowsjs');    
+};
 
 updateStyle() {
     this.removeStyle();
@@ -38,13 +29,7 @@ updateStyle() {
     document.body.classList.toggle('compact-title', this.settings.CompactTitle);
     document.body.classList.toggle('tab-numbering', this.settings.TabNumbering);
     document.body.classList.toggle('tab-underline', this.settings.TabUnderline);
-
-    if (Number.isNaN(this.settings.HeaderHeight)) {
-    document.querySelector(':root').style.setProperty('--headerheight','29px');
-    }
-    else {
     document.querySelector(':root').style.setProperty('--headerheight', this.settings.HeaderHeight+'px');
-    }
   };
 
 refresh() {
@@ -54,6 +39,7 @@ refresh() {
 
 //remove class when plugin is disabled
 onunload() {
+this.removeStyle();
 let unloadCleaner = Array.from(document.querySelectorAll('.stayopen'));
   unloadCleaner.forEach(node => {
     node.removeClass('stayopen');
@@ -97,8 +83,7 @@ class TabSettings {
   CompactTitle: boolean = false;
   TabNumbering: boolean = false;
   HeaderHeight: number = 29;
-  TabUnderline: boolean = false;
-}
+  };
 
 class TabSettingTab extends PluginSettingTab {
 
@@ -126,21 +111,20 @@ class TabSettingTab extends PluginSettingTab {
             })
     );
 
-    new Setting(containerEl)
+      new Setting(containerEl)
       .setName('Tab Height')
-      .setDesc('Sets the height of tabs and leaf headers (default 29).')
-      .addText(text => text.setPlaceholder('29')
-        .setValue((this.plugin.settings.HeaderHeight || '') + '')
-        .onChange((value) => {
-          this.plugin.settings.HeaderHeight = parseInt(value.trim());
-          this.plugin.saveData(this.plugin.settings);
-          this.plugin.refresh();
-          })
-    );
+    .setDesc('Sets the height of tabs and leaf headers (default 29).')
+    .addText(text => text.setPlaceholder('29')  
+      .setValue((this.plugin.settings.HeaderHeight || '') + '')
+      .onChange((value) => {
+        this.plugin.settings.HeaderHeight = parseInt(value.trim());
+        this.plugin.saveData(this.plugin.settings);
+        this.plugin.refresh();
+      }));
 
     new Setting(containerEl)
-      .setName('Horizontal Splits')
-      .setDesc('Enable to make \'horizontal\' splits properly horizontal. Handy for resizing the tabbed split when in side-by-side view.')
+      .setName('Proper Horizontal Splits')
+      .setDesc('Enable to make \'horizontal\' splits actually horizontal. Handy for resizing the tabbed split for side-by-side view.')
       .addToggle(toggle => toggle.setValue(this.plugin.settings.HorizontalToVertical)
           .onChange((value) => {
             this.plugin.settings.HorizontalToVertical = value;
@@ -159,7 +143,7 @@ class TabSettingTab extends PluginSettingTab {
             })
     );
     new Setting(containerEl)
-      .setName('Full sized title text')
+      .setName('Full Sized Title Text')
       .setDesc('Enable full sized title text.')
       .addToggle(toggle => toggle.setValue(this.plugin.settings.SmallTitle)
           .onChange((value) => {
@@ -169,7 +153,7 @@ class TabSettingTab extends PluginSettingTab {
             })
     );
     new Setting(containerEl)
-      .setName('Full tab spacing.')
+      .setName('Full Tab Spacing.')
       .setDesc('Enable for default tab button spacing.')
       .addToggle(toggle => toggle.setValue(this.plugin.settings.CompactTitle)
           .onChange((value) => {
