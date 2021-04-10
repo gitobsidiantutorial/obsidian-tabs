@@ -129,7 +129,7 @@ class TabSettingTab extends obsidian.PluginSettingTab {
     display() {
         let { containerEl } = this;
         containerEl.empty();
-        containerEl.createEl('h3', { text: 'Tabbed View Settings' });
+        containerEl.createEl('h3', { text: 'Obsidian Tabs Settings' });
         new obsidian.Setting(containerEl)
             .setName('Two Row Tab Overview')
             .setDesc('When sufficient tabs have been opened, display tabs in two rows.')
