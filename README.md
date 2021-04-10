@@ -4,14 +4,13 @@ Opening a document in a new pane (ctrl+click) instead activates tabbed view. One
 
 [Watch the demo.](https://i.imgur.com/oCRMNBn.mp4)
 
-Tabbed mode is made to be used in unison with the [pane relief plugin](https://github.com/pjeby/pane-relief), in particular the _cycle to workspace pane_ hotkeys, and the [maximise pane plugin](https://github.com/deathau/maximise-active-pane-obsidian), but can certainly be used without.
 
 ### Features: 
 - Create tabs by opening new panes while in a vertical split, such as the default workspace configuration.
 
 - Click on a tab in the tab overview to bring it in focus.
 
-- Numbering of tabs for usage with the pane relief jump to pane number hotkeys.
+- Made for use with the [pane relief plugin](https://github.com/pjeby/pane-relief).
 
 - Automatic hiding of the tab bar when only one pane is open
 
