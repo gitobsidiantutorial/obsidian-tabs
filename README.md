@@ -30,6 +30,7 @@ Tabbed mode is made to be used in unison with the [pane relief plugin](https://g
 
 
 #### Issues:
+- When a session is ended with a side-by-side pane as the active pane, the next session will have the tab view collapsed.
 
 - When the last pane is focused on, **no** tabs are underlined. The tab that will be focused on by pressing ctrl+tab is the left-most one.
 
