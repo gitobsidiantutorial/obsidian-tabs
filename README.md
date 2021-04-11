@@ -2,7 +2,7 @@
 ### CSS snippet for tabbed obsidian usage
 Opening a document in a new pane (ctrl+click) instead activates tabbed view. One document is visible in the viewer, and the active document can be switched by selecting another tab.
 
-[Watch the demo.](https://i.imgur.com/oCRMNBn.mp4)
+![Watch the demo.](https://github.com/gitobsidiantutorial/obsidian-tabs/blob/main/vids/demo.webp)
 
 
 ### Features: 
@@ -30,24 +30,6 @@ Opening a document in a new pane (ctrl+click) instead activates tabbed view. One
 
 - Ongoing efforts to maximise [theme compatibility](#theme-compatibility) through compatches.
 
-
-### Issues:
-- When the last pane is focused on, **no** tabs are underlined. The tab that will be focused on by pressing ctrl+tab is the left-most one. This does not apply when side-by-side view is used.
-
-- A tab cannot be horizontally split.
-
-- The focused tab is taken out of the tab overview. Tab numbering and underlining are used to make Pane Relief shortcuts easier to use with this in mind.
-
-- The order of operations must be respected when setting a split view, it is not possible to create a split view when already in tabbed mode.
-
-- The backlinks in pane plugin causes unintended behaviour with Pane Relief. This is not caused by this plugin.
-
-- A slight flicker is visible in the tab overview when opening new tabs or selecting a different tab.
-
-If you have found an issue not listed here, [feel free to document it](https://github.com/gitobsidiantutorial/obsidian-tabs/issues).
-
-
-
 ### Usage:
 You can install the plugin via the Community Plugins tab within Obsidian.
 #### Manual Installation
@@ -64,6 +46,20 @@ Split the only pane of a one pane workspace horizontally. Split the left pane (y
 
 [Example of split view usage](https://i.imgur.com/lStwTNI.mp4). A tab has been linked to the pane on the right, to make changing its contents easier. The maximise pane plugin is used when only one document needs focusing on.
 
+### Issues:
+- When the last pane is focused on, **no** tabs are underlined. The tab that will be focused on by pressing ctrl+tab is the left-most one. This does not apply when side-by-side view is used.
+
+- A tab cannot be horizontally split.
+
+- The focused tab is taken out of the tab overview. Tab numbering and underlining are used to make Pane Relief shortcuts easier to use with this in mind.
+
+- The order of operations must be respected when setting a split view, it is not possible to create a split view when already in tabbed mode.
+
+- The backlinks in pane plugin causes unintended behaviour with Pane Relief. This is not caused by this plugin.
+
+- A slight flicker is visible in the tab overview when opening new tabs or selecting a different tab.
+
+If you have found an issue not listed here, [feel free to document it](https://github.com/gitobsidiantutorial/obsidian-tabs/issues).
 
 ### Theme compatibility
 Please notify me through the [issues feature](https://github.com/gitobsidiantutorial/obsidian-tabs/issues) whether a theme conflicts with the css of this plugin. If I can find an easy solution, I will share a compatch as an extra snippet which must also be enabled when using that theme.
