@@ -1,24 +1,31 @@
-/* If an optional feature is not desired remove all of the css after the optional feature title until the next feature title */
-
-/* REQUIRED */
 :root{
---rowsjs: 1;
---rows1 : 1;
---rows : min(var(--rows1),var(--rowsjs));
---tabs: 10; /* set desired minimum number of tabs*/
---jstabs: 0;
---numtabs : max(var(--jstabs),var(--tabs));  
---w1 : calc(100% * var(--rows) / var(--numtabs));
---w2 : max(20% , 14.5rem/*alter width of tab here*/);
 --headerheight: 29px;
 }
 
-:root .rowoverflow {
+.mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical,
+.mod-root.workspace-split.mod-vertical{ 
+overflow-x: hidden; 
+flex-direction: row;
+flex-wrap: wrap;
+align-content: flex-start;
+align-items: stretch;
+overflow-y: hidden;
+--jstabs: 0;
+--tabs: 10;
+--rowsjs: 1;
+--rows1 : 1;
+--rows : min(var(--rows1),var(--rowsjs));
+--numtabs : max(var(--jstabs),var(--tabs));  
+--w1 : calc(100% * var(--rows) / var(--numtabs));
+--w2 : max(20% , 14.5rem/*alter width of tab here*/);
+}
+
+.rowoverflow .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical,
+.rowoverflow .mod-root.workspace-split.mod-vertical {
 --rows1: 2;
 --rows : min(var(--rows1),var(--rowsjs));
 --w1 : calc(100% * var(--rows) / var(--numtabs));
 }
-
 
 .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf,
 .mod-root.workspace-split.mod-vertical > div.workspace-leaf { 
@@ -31,18 +38,6 @@ padding-right: 0px;
 border-radius: 10px 10px 0px 0px; /* adds a slight rounding to the top corners of a pane header - NOT ESSENTIAL */
 border: 1px solid var(--background-modifier-border); /* adds a slight outline to the tab header - NOT ESSENTIAL */
 border-bottom: 0;
-}
-
-
-
-.mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical,
-.mod-root.workspace-split.mod-vertical{ 
-overflow-x: hidden; 
-flex-direction: row;
-flex-wrap: wrap;
-align-content: flex-start;
-align-items: stretch;
-overflow-y: hidden; /* no second scrollbar should be visible, if one appears, then I've made a mistake */
 }
 
 .view-content {
@@ -59,6 +54,9 @@ border-top: 0;
 
 /* set active pane below tab bar */
 .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.stayopen,
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf.stayopen{order:102;}  /* mitigates flicker slights */
+
+.mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.stayopen,
 .mod-root.workspace-split.mod-vertical > div.workspace-leaf.stayopen,
 .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.mod-active,
 .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active {
@@ -74,7 +72,6 @@ border-right: 0;
 border-bottom: 0;
 }
 
-/* compatibility with maximise pane plugin */
 .mod-root.workspace-split.mod-vertical.maximised .workspace-split.mod-vertical > div.workspace-leaf.mod-active, .mod-root.workspace-split.mod-vertical.maximised > div.workspace-leaf.mod-active {
 height: 100%!important;
 top: 0px;
@@ -101,7 +98,6 @@ height: var(--headerheight);
 .view-header-title-container::after {  /* remove pane header shadows */
 display:none;
 }
-
 
 /* OPTIONAL */
 
@@ -215,8 +211,8 @@ text-decoration: underline;
 /* optional feature tab numbers (useful for pane relief shortcuts) */
 body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical:first-of-type > div.workspace-leaf                   .view-header-title-container,
 body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical:first-of-type > div.workspace-leaf:last-of-type      .view-header-title-container,
-body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > .workspace-split.mod-vertical > div.workspace-leaf                   .view-header-title,
-body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > .workspace-split.mod-vertical > div.workspace-leaf:last-of-type      .view-header-title,
+body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical:first-of-type > div.workspace-leaf                   .view-header-title,
+body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical:first-of-type > div.workspace-leaf:last-of-type      .view-header-title,
 body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf                   .view-header-title,
 body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf:last-of-type      .view-header-title,
 body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf                   .view-header-title-container, 
