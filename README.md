@@ -16,6 +16,8 @@ Opening a document in a new pane (ctrl+click) instead activates tabbed view. One
 
 - Fully compatible with the [maximise pane plugin](https://github.com/deathau/maximise-active-pane-obsidian).
 
+- [Multiple tabbed panes](https://i.imgur.com/O2fQx2U.mp4).
+
 - When sufficient tabs have been opened, a [second row can be opened](https://i.imgur.com/iZJ5byx.mp4). (Optional)
 
 - Smaller tab styling relative to main pane. (Optional)
@@ -30,8 +32,6 @@ Opening a document in a new pane (ctrl+click) instead activates tabbed view. One
 
 
 ### Issues:
-- When a session is ended with a side-by-side pane as the active pane, rather than a tab, the next session will have the tab view collapsed. Click on a tab to resolve this.
-
 - When the last pane is focused on, **no** tabs are underlined. The tab that will be focused on by pressing ctrl+tab is the left-most one. This does not apply when side-by-side view is used.
 
 - A tab cannot be horizontally split.
@@ -44,7 +44,7 @@ Opening a document in a new pane (ctrl+click) instead activates tabbed view. One
 
 - A slight flicker is visible in the tab overview when opening new tabs or selecting a different tab.
 
-If you have found an issue not listed here, ]feel free to document it](https://github.com/gitobsidiantutorial/obsidian-tabs/issues).
+If you have found an issue not listed here, [feel free to document it](https://github.com/gitobsidiantutorial/obsidian-tabs/issues).
 
 
 
