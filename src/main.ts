@@ -158,7 +158,7 @@ class TabSettingTab extends PluginSettingTab {
     let { containerEl } = this;
 
     containerEl.empty();
-    containerEl.createEl("h3", { text: "Tabbed View Settings" });
+    containerEl.createEl("h3", { text: "Obsidian Tabs Settings" });
 
     new Setting(containerEl)
       .setName("Two Row Tab Overview")
