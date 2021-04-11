@@ -14,6 +14,7 @@ export default class TabbedView extends Plugin {
   async loadSettings() {
     this.settings = Object.assign(DEFAULT_SETTINGS, await this.loadData());
   }
+
   //prevent tabbed views besides the active pane from being collapsed on startup
   startTabs() {
     let childsplitfirsttab = Array.from(
@@ -100,7 +101,7 @@ export default class TabbedView extends Plugin {
     removeopen.forEach((node) => {
       node.removeClass("stayopen");
     });
-    app.workspace.activeLeaf.containerEl.addClass("stayopen");
+    if (app.workspace.activeLeaf) {app.workspace.activeLeaf.containerEl.addClass("stayopen")}
   }
 
   handleTabs() {
