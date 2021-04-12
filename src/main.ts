@@ -3,13 +3,16 @@ export default class TabbedView extends Plugin {
   settings: TabSettings;
 
   async onload() {
-  await this.loadSettings();
+    await this.loadSettings();
     this.addSettingTab(new TabSettingTab(this.app, this));
     this.registerEvent(this.app.workspace.on("layout-change", this.handleTabs));
-    this.registerEvent(this.app.workspace.on("active-leaf-change", this.handleOpen));
+    this.registerEvent(
+      this.app.workspace.on("active-leaf-change", this.handleOpen)
+    );
     this.app.workspace.onLayoutReady(() => {
-    this.startTabs();
-    this.refresh() })
+      this.startTabs();
+      this.refresh();
+    });
   }
   async loadSettings() {
     this.settings = Object.assign(DEFAULT_SETTINGS, await this.loadData());
@@ -18,7 +21,9 @@ export default class TabbedView extends Plugin {
   //prevent tabbed views besides the active pane from being collapsed on startup
   startTabs() {
     let childsplitfirsttab = Array.from(
-      app.workspace.rootSplit.containerEl.querySelectorAll(".mod-vertical .workspace-leaf:first-of-type")
+      app.workspace.rootSplit.containerEl.querySelectorAll(
+        ".mod-vertical .workspace-leaf:first-of-type"
+      )
     );
     childsplitfirsttab.forEach((node) => {
       node.addClass("stayopen");
@@ -53,7 +58,10 @@ export default class TabbedView extends Plugin {
 
   updateStyle() {
     document.body.classList.toggle("rowoverflow", this.settings.rowOverflow);
-    document.body.classList.toggle("horizontal-to-vertical",this.settings.horizontalToVertical);
+    document.body.classList.toggle(
+      "horizontal-to-vertical",
+      this.settings.horizontalToVertical
+    );
     document.body.classList.toggle("hide-buttons", this.settings.hideButtons);
     document.body.classList.toggle("small-title", this.settings.smallTitle);
     document.body.classList.toggle("compact-title", this.settings.compactTitle);
@@ -101,7 +109,9 @@ export default class TabbedView extends Plugin {
     removeopen.forEach((node) => {
       node.removeClass("stayopen");
     });
-    if (app.workspace.activeLeaf) {app.workspace.activeLeaf.containerEl.addClass("stayopen")}
+    if (app.workspace.activeLeaf) {
+      app.workspace.activeLeaf.containerEl.addClass("stayopen");
+    }
   }
 
   handleTabs() {
