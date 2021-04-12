@@ -44,15 +44,12 @@ export default class TabbedView extends Plugin {
     app.workspace.rootSplit.containerEl.style.removeProperty("--jstabs");
     app.workspace.rootSplit.containerEl.style.removeProperty("--rowsjs");
 
-    function tabcleaner(tabparent) {
-      tabparent.style.removeProperty("--rowsjs");
-      tabparent.style.removeProperty("--jstabs");
-    }
     let childsplittabs = Array.from(
       app.workspace.rootSplit.containerEl.querySelectorAll(".mod-vertical")
     );
     childsplittabs.forEach((node) => {
-      tabcleaner(node);
+      node.style.removeProperty("--rowsjs");
+      node.style.removeProperty("--jstabs");
     });
   }
 
@@ -94,28 +91,28 @@ export default class TabbedView extends Plugin {
   //remove class when plugin is disabled
   onunload() {
     this.removeStyle();
-    let unloadCleaner = Array.from(
+    let openedTabs = Array.from(
       app.workspace.rootSplit.containerEl.querySelectorAll(".stayopen")
     );
-    unloadCleaner.forEach((node) => {
+    openedTabs.forEach((node) => {
       node.removeClass("stayopen");
     });
   }
 
   handleOpen() {
-    let removeopen = Array.from(
-      app.workspace.activeLeaf.containerEl.parentNode.children
-    ); //remove class from siblings of active pane, but intentionally not from all
-    removeopen.forEach((node) => {
-      node.removeClass("stayopen");
-    });
     if (app.workspace.activeLeaf) {
-      app.workspace.activeLeaf.containerEl.addClass("stayopen");
+      let removeopen = Array.from(
+        app.workspace.activeLeaf.containerEl.parentNode.children
+      ); //remove class from siblings of active pane, but intentionally not from all
+      removeopen.forEach((node) => {
+        node.removeClass("stayopen");
+      });
+        app.workspace.activeLeaf.containerEl.addClass("stayopen");
     }
   }
 
   handleTabs() {
-    function tabcounter(tabparent) {
+    function assignStylesToTab(tabparent) {
       let tabwidth = tabparent.children.length - 1;
       tabparent.style.setProperty("--jstabs", tabwidth);
       if (tabwidth > 7) {
@@ -126,13 +123,13 @@ export default class TabbedView extends Plugin {
     }
 
     let rootsplittabs = app.workspace.rootSplit.containerEl;
-    tabcounter(rootsplittabs);
+    assignStylesToTab(rootsplittabs);
 
     let childsplittabs = Array.from(
       app.workspace.rootSplit.containerEl.querySelectorAll(".mod-vertical")
     );
     childsplittabs.forEach((node) => {
-      tabcounter(node);
+      assignStylesToTab(node);
     });
   }
 }
@@ -144,6 +141,7 @@ interface TabSettings {
   smallTitle: boolean;
   compactTitle: boolean;
   tabNumbering: boolean;
+  tabUnderline: boolean;
   headerHeight: number;
 }
 
@@ -154,6 +152,7 @@ const DEFAULT_SETTINGS: TabSettings = {
   smallTitle: false,
   compactTitle: false,
   tabNumbering: false,
+  tabUnderline: false,
   headerHeight: 29,
 };
 
