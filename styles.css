@@ -61,6 +61,8 @@ border-top: 0;
 .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.mod-active,
 .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active {
 align-self: stretch;
+position: absolute;
+bottom: 0px;
 order: 99;
 min-width: 100%;
 min-height: calc(100% - var(--headerheight) * var(--rows));
@@ -209,10 +211,10 @@ text-decoration: underline;
 }
 
 /* optional feature tab numbers (useful for pane relief shortcuts) */
-body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical:first-of-type > div.workspace-leaf                   .view-header-title-container,
+body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical:first-of-type > div.workspace-leaf                   .view-header-title-container, /* first tab container gets numbered from 1-8 */
 body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical:first-of-type > div.workspace-leaf:last-of-type      .view-header-title-container,
-body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical:first-of-type > div.workspace-leaf                   .view-header-title,
-body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical:first-of-type > div.workspace-leaf:last-of-type      .view-header-title,
+body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical:only-of-type > div.workspace-leaf                   .view-header-title, /* alt+9 jumps to the LAST pane open, rather than the 9th, so only number if this is the only vertical split*/
+body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical:only-of-type > div.workspace-leaf:last-of-type      .view-header-title,
 body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf                   .view-header-title,
 body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf:last-of-type      .view-header-title,
 body:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf                   .view-header-title-container, 
