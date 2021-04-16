@@ -31,7 +31,7 @@ Opening a document in a new pane (ctrl+click) instead activates tabbed view. One
 - Ongoing efforts to maximise [theme compatibility](#theme-compatibility) through compatches.
 
 ### Usage:
-You can install the plugin via the Community Plugins tab within Obsidian.
+You can install the plugin via the Community Plugins tab within Obsidian. (after it has been approved)
 #### Manual Installation
 - Download the Latest Release from the Releases section.
 - Extract the plugin folder from the archive to your vault's plugins folder: <vault>/.obsidian/plugins/
