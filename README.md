@@ -68,3 +68,5 @@ Please notify me through the [issues feature](https://github.com/gitobsidiantuto
   - [Compatch available](https://raw.githubusercontent.com/gitobsidiantutorial/obsidian-tabs/main/compatch_minimal_theme.css)
 - Cybertron Theme by Nickmilo
   - [Compatch available](https://raw.githubusercontent.com/gitobsidiantutorial/obsidian-tabs/main/compatch_cybertron_theme.css)
+- Blue Topaz by Why-Byte
+  - [Compatch available](https://raw.githubusercontent.com/gitobsidiantutorial/obsidian-tabs/main/compatch_blue_topaz.css)
