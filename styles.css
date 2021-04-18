@@ -52,10 +52,6 @@ height: 100%;
 border-top: 0;
 }
 
-/* set active pane below tab bar */
-.mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.stayopen,
-.mod-root.workspace-split.mod-vertical > div.workspace-leaf.stayopen{order:102;}  /* mitigates flicker slights */
-
 .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.stayopen,
 .mod-root.workspace-split.mod-vertical > div.workspace-leaf.stayopen,
 .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.mod-active,

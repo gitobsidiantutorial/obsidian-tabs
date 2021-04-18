@@ -5,6 +5,8 @@ export default class TabbedView extends Plugin {
   async onload() {
     await this.loadSettings();
     this.addSettingTab(new TabSettingTab(this.app, this));
+    this.handleTabs=this.handleTabs.bind(this);
+    this.handleOpen=this.handleOpen.bind(this);
     this.registerEvent(this.app.workspace.on("layout-change", this.handleTabs));
     this.registerEvent(
       this.app.workspace.on("active-leaf-change", this.handleOpen)
@@ -21,7 +23,7 @@ export default class TabbedView extends Plugin {
   //prevent tabbed views besides the active pane from being collapsed on startup
   startTabs() {
     let childsplitfirsttab = Array.from(
-      app.workspace.rootSplit.containerEl.querySelectorAll(
+      this.app.workspace.rootSplit.containerEl.querySelectorAll(
         ".mod-vertical .workspace-leaf:first-of-type"
       )
     );
@@ -40,12 +42,12 @@ export default class TabbedView extends Plugin {
       "tab-numbering",
       "tab-underline"
     );
-    app.workspace.rootSplit.containerEl.style.removeProperty("--headerheight");
-    app.workspace.rootSplit.containerEl.style.removeProperty("--jstabs");
-    app.workspace.rootSplit.containerEl.style.removeProperty("--rowsjs");
+    this.app.workspace.rootSplit.containerEl.style.removeProperty("--headerheight");
+    this.app.workspace.rootSplit.containerEl.style.removeProperty("--jstabs");
+    this.app.workspace.rootSplit.containerEl.style.removeProperty("--rowsjs");
 
     let childsplittabs = Array.from(
-      app.workspace.rootSplit.containerEl.querySelectorAll(".mod-vertical")
+      this.app.workspace.rootSplit.containerEl.querySelectorAll(".mod-vertical")
     );
     childsplittabs.forEach((node) => {
       node.style.removeProperty("--rowsjs");
@@ -66,20 +68,7 @@ export default class TabbedView extends Plugin {
     document.body.classList.toggle("tab-underline", this.settings.tabUnderline);
     this.handleOpen();
     this.handleTabs();
-    if (
-      this.settings.headerHeight == null ||
-      Number.isNaN(this.settings.headerHeight)
-    ) {
-      app.workspace.rootSplit.containerEl.style.setProperty(
-        "--headerheight",
-        "29px"
-      );
-    } else {
-      app.workspace.rootSplit.containerEl.style.setProperty(
-        "--headerheight",
-        this.settings.headerHeight + "px"
-      );
-    }
+    this.app.workspace.rootSplit.containerEl.style.setProperty("--headerheight", this.settings.headerHeight + "px");
   }
 
   refresh() {
@@ -92,7 +81,7 @@ export default class TabbedView extends Plugin {
   onunload() {
     this.removeStyle();
     let openedTabs = Array.from(
-      app.workspace.rootSplit.containerEl.querySelectorAll(".stayopen")
+      this.app.workspace.rootSplit.containerEl.querySelectorAll(".stayopen")
     );
     openedTabs.forEach((node) => {
       node.removeClass("stayopen");
@@ -100,14 +89,14 @@ export default class TabbedView extends Plugin {
   }
 
   handleOpen() {
-    if (app.workspace.activeLeaf) {
+    if (this.app.workspace.activeLeaf) {
       let removeopen = Array.from(
-        app.workspace.activeLeaf.containerEl.parentNode.children
+        this.app.workspace.activeLeaf.containerEl.parentNode.children
       ); //remove class from siblings of active pane, but intentionally not from all
       removeopen.forEach((node) => {
         node.removeClass("stayopen");
       });
-        app.workspace.activeLeaf.containerEl.addClass("stayopen");
+        this.app.workspace.activeLeaf.containerEl.addClass("stayopen");
     }
   }
 
@@ -122,15 +111,13 @@ export default class TabbedView extends Plugin {
       }
     }
 
-    let rootsplittabs = app.workspace.rootSplit.containerEl;
+    let rootsplittabs = this.app.workspace.rootSplit.containerEl;
     assignStylesToTab(rootsplittabs);
 
     let childsplittabs = Array.from(
-      app.workspace.rootSplit.containerEl.querySelectorAll(".mod-vertical")
+      this.app.workspace.rootSplit.containerEl.querySelectorAll(".mod-vertical")
     );
-    childsplittabs.forEach((node) => {
-      assignStylesToTab(node);
-    });
+    childsplittabs.forEach(assignStylesToTab);
   }
 }
 
@@ -190,7 +177,14 @@ class TabSettingTab extends PluginSettingTab {
           .setPlaceholder("29")
           .setValue((this.plugin.settings.headerHeight || "") + "")
           .onChange((value) => {
-            this.plugin.settings.headerHeight = parseInt(value.trim());
+          let headerHeightTemp = parseInt(value.trim(),10);
+          if (
+            headerHeightTemp == null ||
+            Number.isNaN(headerHeightTemp)
+          ) {this.plugin.settings.headerHeight = DEFAULT_SETTINGS.headerHeight
+          } else (
+          this.plugin.settings.headerHeight = headerHeightTemp
+          )            
             this.plugin.saveData(this.plugin.settings);
             this.plugin.refresh();
           })
