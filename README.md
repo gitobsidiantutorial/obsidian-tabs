@@ -1,4 +1,4 @@
-# Obsidian-tabs
+# Obsidian Tabs
 ### Plugin for tabbed Obsidian usage
 Opening a document in a new pane (ctrl+click on a document in the file explorer) instead activates tabbed view. One document is visible in the viewer, and the active document can be switched by selecting another tab.
 
