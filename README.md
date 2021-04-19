@@ -1,5 +1,5 @@
 # Obsidian-tabs
-### CSS snippet for tabbed obsidian usage
+### Plugin for tabbed obsidian usage
 Opening a document in a new pane (ctrl+click on a document in the file explorer) instead activates tabbed view. One document is visible in the viewer, and the active document can be switched by selecting another tab.
 
 [![video](https://raw.githubusercontent.com/gitobsidiantutorial/obsidian-tabs/main/vids/demo.webp)](https://raw.githubusercontent.com/gitobsidiantutorial/obsidian-tabs/main/vids/demo.webp)
@@ -28,7 +28,7 @@ Opening a document in a new pane (ctrl+click on a document in the file explorer)
 
 - Side by side view \[[demo](https://raw.githubusercontent.com/gitobsidiantutorial/obsidian-tabs/main/vids/horizontalconfigure.webp) and [instructions](#using-split-view)\].
 
-- Ongoing efforts to maximise [theme compatibility](#theme-compatibility) through compatches.
+- Ongoing efforts to maximise [theme compatibility](https://github.com/gitobsidiantutorial/obsidian-tabs#theme-compatibility) through compatches.
 
 ### Usage:
 You can install the plugin via the Community Plugins tab within Obsidian.
