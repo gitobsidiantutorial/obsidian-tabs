@@ -46,6 +46,13 @@ Split the only pane of a one pane workspace horizontally. Split the left pane (y
 
 [Example of split view usage](https://i.imgur.com/lStwTNI.mp4). A tab has been linked to the pane on the right, to make changing its contents easier. The maximise pane plugin is used when only one document needs focusing on.
 
+--- 
+
+[<img src="https://ko-fi.com/img/Kofi_Logo_Blue.svg" height="40px" />](https://ko-fi.com/foreveryone)
+[If you enjoy this plugin, you can buy me a coffee :) ](https://ko-fi.com/foreveryone)
+
+---
+
 ### Issues:
 - When the last pane is focused on, **no** tabs are underlined. The tab that will be focused on by pressing ctrl+tab is the left-most one. This does not apply when side-by-side view is used.
 
