@@ -31,7 +31,7 @@ Opening a document in a new pane (ctrl+click on a document in the file explorer)
 - Ongoing efforts to maximise [theme compatibility](#theme-compatibility) through compatches.
 
 ### Usage:
-You can install the plugin via the Community Plugins tab within Obsidian. (after it has been approved)
+You can install the plugin via the Community Plugins tab within Obsidian.
 #### Manual Installation
 - Download the Latest Release from the Releases section.
 - Extract the plugin folder from the archive to your vault's plugins folder: <vault>/.obsidian/plugins/
