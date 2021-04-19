@@ -49,6 +49,7 @@ Split the only pane of a one pane workspace horizontally. Split the left pane (y
 --- 
 
 [<img src="https://ko-fi.com/img/Kofi_Logo_Blue.svg" height="40px" />](https://ko-fi.com/foreveryone)
+
 [If you enjoy this plugin, you can buy me a coffee :) ](https://ko-fi.com/foreveryone)
 
 ---
