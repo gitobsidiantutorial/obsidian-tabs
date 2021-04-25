@@ -15,6 +15,18 @@ export default class TabbedView extends Plugin {
       this.startTabs();
       this.refresh();
     });
+    this.addCommand({
+      id: 'toggle-tabs',
+      name: 'Toggle Obsidian Tabs',
+      callback: () => {
+        // switch the disabled setting and save
+        this.settings.tabEnabled = !this.settings.tabEnabled;
+        this.saveData(this.settings);
+
+        // disable or enable as necessary
+        this.refresh();
+      }
+    });
   }
   async loadSettings() {
     this.settings = Object.assign(DEFAULT_SETTINGS, await this.loadData());
@@ -66,6 +78,7 @@ export default class TabbedView extends Plugin {
     document.body.classList.toggle("compact-title", this.settings.compactTitle);
     document.body.classList.toggle("tab-numbering", this.settings.tabNumbering);
     document.body.classList.toggle("tab-underline", this.settings.tabUnderline);
+    document.body.classList.toggle("plugin-tabs", this.settings.tabEnabled);
     this.handleOpen();
     this.handleTabs();
     this.app.workspace.rootSplit.containerEl.style.setProperty("--headerheight", this.settings.headerHeight + "px");
@@ -122,6 +135,7 @@ export default class TabbedView extends Plugin {
 }
 
 interface TabSettings {
+  tabEnabled: boolean;
   rowOverflow: boolean;
   horizontalToVertical: boolean;
   hideButtons: boolean;
@@ -133,6 +147,7 @@ interface TabSettings {
 }
 
 const DEFAULT_SETTINGS: TabSettings = {
+  tabEnabled: true,
   rowOverflow: true,
   horizontalToVertical: false,
   hideButtons: false,
@@ -155,6 +170,19 @@ class TabSettingTab extends PluginSettingTab {
 
     containerEl.empty();
     containerEl.createEl("h3", { text: "Obsidian Tabs Settings" });
+
+    new Setting(containerEl)
+      .setName("Enable Obsidian Tabs")
+      .setDesc(
+        "Toggle to enable or disable Obsidian Tabs."
+      )
+      .addToggle((toggle) =>
+        toggle.setValue(this.plugin.settings.tabEnabled).onChange((value) => {
+          this.plugin.settings.tabEnabled = value;
+          this.plugin.saveData(this.plugin.settings);
+          this.plugin.refresh();
+        })
+      );
 
     new Setting(containerEl)
       .setName("Two Row Tab Overview")
