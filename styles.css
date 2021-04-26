@@ -153,6 +153,10 @@ margin-left: 10px;
 margin-left: 0px;
 }
 
+.workspace-leaf .view-header-title{cursor: context-menu}
+
+div.workspace-leaf.stayopen .view-header-title,
+div.workspace-leaf.mod-active .view-header-title{cursor: text}
 
 /* optional feature smaller tab titles */
 .plugin-tabs:not(.small-title) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf:not(.stayopen) .view-header-title,
