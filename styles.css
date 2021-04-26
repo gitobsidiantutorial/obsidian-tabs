@@ -53,6 +53,8 @@ height: 100%;
 border-top: 0;
 }
 
+
+
 .plugin-tabs .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.stayopen,
 .plugin-tabs .mod-root.workspace-split.mod-vertical > div.workspace-leaf.stayopen,
 .plugin-tabs .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.mod-active,
@@ -62,6 +64,7 @@ position: absolute;
 bottom: 0px;
 order: 99;
 min-width: 100%;
+max-width: 100%;
 min-height: calc(100% - var(--headerheight) * var(--rows));
 overflow-y: hidden;
 padding-right: 1px;
@@ -70,6 +73,8 @@ border-left: 0;
 border-right: 0;
 border-bottom: 0;
 }
+
+
 
 .plugin-tabs .mod-root.workspace-split.mod-vertical.maximised .workspace-split.mod-vertical > div.workspace-leaf.mod-active, .mod-root.workspace-split.mod-vertical.maximised > div.workspace-leaf.mod-active {
 height: 100%!important;
@@ -168,33 +173,33 @@ font-size: 16px;
 
 
 /* optional feature hide header button, more options, and edit button on tabs */
-.plugin-tabs(.hide-buttons) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf a[aria-label="Edit (Ctrl/Cmd+Click to edit in new pane)"],
-.plugin-tabs(.hide-buttons) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf .view-header-icon,
-.plugin-tabs(.hide-buttons) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf a[aria-label="Preview (Ctrl/Cmd+Click to open in new pane)"],
-.plugin-tabs(.hide-buttons) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf a[aria-label="More options"],
-.plugin-tabs(.hide-buttons) .mod-root.workspace-split.mod-vertical > div.workspace-leaf a[aria-label="Edit (Ctrl/Cmd+Click to edit in new pane)"],
-.plugin-tabs(.hide-buttons) .mod-root.workspace-split.mod-vertical > div.workspace-leaf .view-header-icon,
-.plugin-tabs(.hide-buttons) .mod-root.workspace-split.mod-vertical > div.workspace-leaf a[aria-label="Preview (Ctrl/Cmd+Click to open in new pane)"],
-.plugin-tabs(.hide-buttons) .mod-root.workspace-split.mod-vertical > div.workspace-leaf a[aria-label="More options"]{
+.plugin-tabs:not(.hide-buttons) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf a[aria-label="Edit (Ctrl/Cmd+Click to edit in new pane)"],
+.plugin-tabs:not(.hide-buttons) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf .view-header-icon,
+.plugin-tabs:not(.hide-buttons) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf a[aria-label="Preview (Ctrl/Cmd+Click to open in new pane)"],
+.plugin-tabs:not(.hide-buttons) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf a[aria-label="More options"],
+.plugin-tabs:not(.hide-buttons) .mod-root.workspace-split.mod-vertical > div.workspace-leaf a[aria-label="Edit (Ctrl/Cmd+Click to edit in new pane)"],
+.plugin-tabs:not(.hide-buttons) .mod-root.workspace-split.mod-vertical > div.workspace-leaf .view-header-icon,
+.plugin-tabs:not(.hide-buttons) .mod-root.workspace-split.mod-vertical > div.workspace-leaf a[aria-label="Preview (Ctrl/Cmd+Click to open in new pane)"],
+.plugin-tabs:not(.hide-buttons) .mod-root.workspace-split.mod-vertical > div.workspace-leaf a[aria-label="More options"]{
 display: none;
 }
 
-.plugin-tabs(.hide-buttons) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.stayopen a[aria-label="Edit (Ctrl/Cmd+Click to edit in new pane)"],
-.plugin-tabs(.hide-buttons) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.stayopen .view-header-icon,
-.plugin-tabs(.hide-buttons) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.stayopen a[aria-label="Preview (Ctrl/Cmd+Click to open in new pane)"],
-.plugin-tabs(.hide-buttons) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.stayopen a[aria-label="More options"],
-.plugin-tabs(.hide-buttons) .mod-root.workspace-split.mod-vertical > div.workspace-leaf.stayopen a[aria-label="Edit (Ctrl/Cmd+Click to edit in new pane)"],
-.plugin-tabs(.hide-buttons) .mod-root.workspace-split.mod-vertical > div.workspace-leaf.stayopen a[aria-label="Preview (Ctrl/Cmd+Click to open in new pane)"],
-.plugin-tabs(.hide-buttons) .mod-root.workspace-split.mod-vertical > div.workspace-leaf.stayopen .view-header-icon,
-.plugin-tabs(.hide-buttons) .mod-root.workspace-split.mod-vertical > div.workspace-leaf.stayopen a[aria-label="More options"],
-.plugin-tabs(.hide-buttons) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.mod-active a[aria-label="Edit (Ctrl/Cmd+Click to edit in new pane)"],
-.plugin-tabs(.hide-buttons) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.mod-active .view-header-icon,
-.plugin-tabs(.hide-buttons) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.mod-active a[aria-label="Preview (Ctrl/Cmd+Click to open in new pane)"],
-.plugin-tabs(.hide-buttons) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.mod-active a[aria-label="More options"],
-.plugin-tabs(.hide-buttons) .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active a[aria-label="Edit (Ctrl/Cmd+Click to edit in new pane)"],
-.plugin-tabs(.hide-buttons) .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active a[aria-label="Preview (Ctrl/Cmd+Click to open in new pane)"],
-.plugin-tabs(.hide-buttons) .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active .view-header-icon,
-.plugin-tabs(.hide-buttons) .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active a[aria-label="More options"]{
+.plugin-tabs:not(.hide-buttons) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.stayopen a[aria-label="Edit (Ctrl/Cmd+Click to edit in new pane)"],
+.plugin-tabs:not(.hide-buttons) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.stayopen .view-header-icon,
+.plugin-tabs:not(.hide-buttons) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.stayopen a[aria-label="Preview (Ctrl/Cmd+Click to open in new pane)"],
+.plugin-tabs:not(.hide-buttons) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.stayopen a[aria-label="More options"],
+.plugin-tabs:not(.hide-buttons) .mod-root.workspace-split.mod-vertical > div.workspace-leaf.stayopen a[aria-label="Edit (Ctrl/Cmd+Click to edit in new pane)"],
+.plugin-tabs:not(.hide-buttons) .mod-root.workspace-split.mod-vertical > div.workspace-leaf.stayopen a[aria-label="Preview (Ctrl/Cmd+Click to open in new pane)"],
+.plugin-tabs:not(.hide-buttons) .mod-root.workspace-split.mod-vertical > div.workspace-leaf.stayopen .view-header-icon,
+.plugin-tabs:not(.hide-buttons) .mod-root.workspace-split.mod-vertical > div.workspace-leaf.stayopen a[aria-label="More options"],
+.plugin-tabs:not(.hide-buttons) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.mod-active a[aria-label="Edit (Ctrl/Cmd+Click to edit in new pane)"],
+.plugin-tabs:not(.hide-buttons) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.mod-active .view-header-icon,
+.plugin-tabs:not(.hide-buttons) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.mod-active a[aria-label="Preview (Ctrl/Cmd+Click to open in new pane)"],
+.plugin-tabs:not(.hide-buttons) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.mod-active a[aria-label="More options"],
+.plugin-tabs:not(.hide-buttons) .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active a[aria-label="Edit (Ctrl/Cmd+Click to edit in new pane)"],
+.plugin-tabs:not(.hide-buttons) .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active a[aria-label="Preview (Ctrl/Cmd+Click to open in new pane)"],
+.plugin-tabs:not(.hide-buttons) .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active .view-header-icon,
+.plugin-tabs:not(.hide-buttons) .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active a[aria-label="More options"]{
 display: block;
 }
 
@@ -202,28 +207,28 @@ display: block;
 /* Pane relief specific options */
 
 /* optional feature underline next tab [pane relief cycle to next pane hotkey] */
-.plugin-tabs(.tab-underline) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.mod-active + div.workspace-leaf .view-header-title ,
-.plugin-tabs(.tab-underline) .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active + div.workspace-leaf .view-header-title {
+.plugin-tabs:not(.tab-underline) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.mod-active + div.workspace-leaf .view-header-title ,
+.plugin-tabs:not(.tab-underline) .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active + div.workspace-leaf .view-header-title {
 text-decoration: underline;
 }
 
 /* optional feature tab numbers (useful for pane relief shortcuts) */
-.plugin-tabs(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical:first-of-type > div.workspace-leaf                   .view-header-title-container, /* first tab container gets numbered from 1-8 */
-.plugin-tabs(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical:first-of-type > div.workspace-leaf:last-of-type      .view-header-title-container,
-.plugin-tabs(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical:only-of-type > div.workspace-leaf                   .view-header-title, /* alt+9 jumps to the LAST pane open, rather than the 9th, so only number if this is the only vertical split*/
-.plugin-tabs(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical:only-of-type > div.workspace-leaf:last-of-type      .view-header-title,
-.plugin-tabs(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf                   .view-header-title,
-.plugin-tabs(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf:last-of-type      .view-header-title,
-.plugin-tabs(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf                   .view-header-title-container, 
-.plugin-tabs(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf:last-of-type      .view-header-title-container {padding-left: 0px}
+.plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical:first-of-type > div.workspace-leaf                   .view-header-title-container, /* first tab container gets numbered from 1-8 */
+.plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical:first-of-type > div.workspace-leaf:last-of-type      .view-header-title-container,
+.plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical:only-of-type > div.workspace-leaf                   .view-header-title, /* alt+9 jumps to the LAST pane open, rather than the 9th, so only number if this is the only vertical split*/
+.plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical:only-of-type > div.workspace-leaf:last-of-type      .view-header-title,
+.plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf                   .view-header-title,
+.plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf:last-of-type      .view-header-title,
+.plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf                   .view-header-title-container, 
+.plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf:last-of-type      .view-header-title-container {padding-left: 0px}
 
-.plugin-tabs(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical:first-of-type > .workspace-leaf:nth-of-type(n+9)  .view-header-title,
-.plugin-tabs(.tab-numbering) .mod-root.workspace-split.mod-vertical > .workspace-leaf:nth-of-type(n+9)  .view-header-title {padding-left: 5px} /* intentionally less specific, so it gets overridden */
+.plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical:first-of-type > .workspace-leaf:nth-of-type(n+9)  .view-header-title,
+.plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > .workspace-leaf:nth-of-type(n+9)  .view-header-title {padding-left: 5px} /* intentionally less specific, so it gets overridden */
 
-.plugin-tabs(.tab-numbering) .mod-root.workspace-split.mod-vertical { counter-reset: tab; }
+.plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical { counter-reset: tab; }
 
-.plugin-tabs(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical:first-of-type > div.workspace-leaf > .workspace-leaf-content > .view-header .view-header-title::before,
-.plugin-tabs(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf > .workspace-leaf-content > .view-header .view-header-title::before{
+.plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical:first-of-type > div.workspace-leaf > .workspace-leaf-content > .view-header .view-header-title::before,
+.plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf > .workspace-leaf-content > .view-header .view-header-title::before{
 counter-increment: tab;
 content: counter(tab);
 padding-top: 2px;
@@ -237,54 +242,54 @@ position: static; /* compatibility with mininal */
 background-color: var(--background-secondary-alt); /* change to appealing colours in your theme */
 }
 
-.plugin-tabs(.tab-numbering) .mod-root.workspace-split.mod-vertical div.workspace-split.mod-vertical:first-of-type > div.workspace-leaf:nth-of-type(n+9)  > .workspace-leaf-content > .view-header .view-header-title::before,
-.plugin-tabs(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf:nth-of-type(n+9)  > .workspace-leaf-content > .view-header .view-header-title::before {
+.plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical div.workspace-split.mod-vertical:first-of-type > div.workspace-leaf:nth-of-type(n+9)  > .workspace-leaf-content > .view-header .view-header-title::before,
+.plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf:nth-of-type(n+9)  > .workspace-leaf-content > .view-header .view-header-title::before {
 display: none;
 }
 
-.plugin-tabs(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-split.mod-vertical:first-of-type > div.workspace-leaf:nth-of-type(n+9):last-of-type  > .workspace-leaf-content > .view-header .view-header-title::before,
-.plugin-tabs(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf:nth-of-type(n+9):last-of-type  > .workspace-leaf-content > .view-header .view-header-title::before {
+.plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-split.mod-vertical:first-of-type > div.workspace-leaf:nth-of-type(n+9):last-of-type  > .workspace-leaf-content > .view-header .view-header-title::before,
+.plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf:nth-of-type(n+9):last-of-type  > .workspace-leaf-content > .view-header .view-header-title::before {
 display: inline-block;
 content: "9";
 }
 
-.plugin-tabs(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical:first-of-type > div.workspace-leaf.stayopen .view-header-title::before,
-.plugin-tabs(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf.stayopen .view-header-title::before,
-.plugin-tabs(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical:first-of-type > div.workspace-leaf.mod-active .view-header-title::before,
-.plugin-tabs(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active .view-header-title::before {
+.plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical:first-of-type > div.workspace-leaf.stayopen .view-header-title::before,
+.plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf.stayopen .view-header-title::before,
+.plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical:first-of-type > div.workspace-leaf.mod-active .view-header-title::before,
+.plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active .view-header-title::before {
 color: var(--text-muted); /* change to appealing colour in your theme */
 background-color: var(--background-secondary-alt);
 margin-left: -0.3em;
 }
 
-.plugin-tabs(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical:first-of-type > div.workspace-leaf.stayopen .view-header-icon,
-.plugin-tabs(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf.stayopen .view-header-icon,
-.plugin-tabs(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical:first-of-type > div.workspace-leaf.mod-active .view-header-icon,
-.plugin-tabs(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active .view-header-icon {
+.plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical:first-of-type > div.workspace-leaf.stayopen .view-header-icon,
+.plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf.stayopen .view-header-icon,
+.plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical:first-of-type > div.workspace-leaf.mod-active .view-header-icon,
+.plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active .view-header-icon {
 top: 0;
 padding-top: 6px;
 padding-right: 5px;
 background-color: var(--background-secondary-alt); /* make background of icon the same as the tab numbering */
 }
 
-.plugin-tabs(.tab-numbering) .mod-root.workspace-split.mod-vertical > .workspace-split.mod-horizontal div.workspace-leaf.stayopen:nth-child(n+10) .view-header-icon,
-.plugin-tabs(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical:first-of-type > div.workspace-leaf.stayopen:nth-child(n+10):not(:last-child) .view-header-icon,
-.plugin-tabs(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf.stayopen:nth-child(n+10):not(:last-child) .view-header-icon,
-.plugin-tabs(.tab-numbering) .mod-root.workspace-split.mod-vertical > .workspace-split.mod-horizontal div.workspace-leaf.mod-active:nth-child(n+10) .view-header-icon,
-.plugin-tabs(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical:first-of-type > div.workspace-leaf.mod-active:nth-child(n+10):not(:last-child) .view-header-icon,
-.plugin-tabs(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active:nth-child(n+10):not(:last-child) .view-header-icon {
+.plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > .workspace-split.mod-horizontal div.workspace-leaf.stayopen:nth-child(n+10) .view-header-icon,
+.plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical:first-of-type > div.workspace-leaf.stayopen:nth-child(n+10):not(:last-child) .view-header-icon,
+.plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf.stayopen:nth-child(n+10):not(:last-child) .view-header-icon,
+.plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > .workspace-split.mod-horizontal div.workspace-leaf.mod-active:nth-child(n+10) .view-header-icon,
+.plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical:first-of-type > div.workspace-leaf.mod-active:nth-child(n+10):not(:last-child) .view-header-icon,
+.plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active:nth-child(n+10):not(:last-child) .view-header-icon {
 padding-right: 10px;
 }
 
-.plugin-tabs(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-horizontal > div.workspace-leaf:first-of-type,
-.plugin-tabs(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active:only-of-type { border-radius: 10px 10px 0px 0px; } /* don't display tab number if only one tab is open */
-.plugin-tabs(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-horizontal > div.workspace-leaf:first-of-type .view-header-icon,
-.plugin-tabs(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active:only-of-type .view-header-icon{background-color: transparent; margin-right:0.5em;}
-.plugin-tabs(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-horizontal > div.workspace-leaf:first-of-type .view-header-title::before,
-.plugin-tabs(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active:only-of-type .view-header-title::before { display: none!important; }
+.plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-horizontal > div.workspace-leaf:first-of-type,
+.plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active:only-of-type { border-radius: 10px 10px 0px 0px; } /* don't display tab number if only one tab is open */
+.plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-horizontal > div.workspace-leaf:first-of-type .view-header-icon,
+.plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active:only-of-type .view-header-icon{background-color: transparent; margin-right:0.5em;}
+.plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-horizontal > div.workspace-leaf:first-of-type .view-header-title::before,
+.plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active:only-of-type .view-header-title::before { display: none!important; }
 
-.plugin-tabs(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-horizontal div.workspace-leaf.mod-active .view-header,
-.plugin-tabs(.tab-numbering) .mod-root.workspace-split.mod-vertical.maximised > div.workspace-leaf.mod-active .view-header{
+.plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-horizontal div.workspace-leaf.mod-active .view-header,
+.plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical.maximised > div.workspace-leaf.mod-active .view-header{
 border-left-width: 2px;
 border-top-width: 2px
 }
