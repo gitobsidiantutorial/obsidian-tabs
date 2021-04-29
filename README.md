@@ -42,7 +42,9 @@ You can install the plugin via the Community Plugins tab within Obsidian.
 #### Using split view
 [![video](https://raw.githubusercontent.com/gitobsidiantutorial/obsidian-tabs/main/vids/horizontalconfigure.webp)](https://raw.githubusercontent.com/gitobsidiantutorial/obsidian-tabs/main/vids/horizontalconfigure.webp)
 
-Split the only pane of a one pane workspace horizontally. Split the left pane (you can split the right one if you're not using the pane relief plugin) vertically. Enable **Horizontal Splits** in the plugin settings to resize the panes in proportion to each other. After adjusting the pane size, you can disable the setting to resume vertical splitting.
+Split the only pane of a one pane workspace horizontally. Split the left pane (you can split the right one if you're not using the pane relief plugin) vertically. 
+
+If you want to resize the split, enable **Horizontal Splits** in the plugin settings to resize the panes in proportion to each other, or toggle Obsidian Tags off. After adjusting the pane size, you can return resume using Obsidian Tabs as you prefer.
 
 [Example of split view usage](https://i.imgur.com/lStwTNI.mp4). A tab has been linked to the pane on the right, to make changing its contents easier. The maximise pane plugin is used when only one document needs focusing on.
 
