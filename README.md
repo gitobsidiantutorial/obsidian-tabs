@@ -81,4 +81,4 @@ Please notify me through the [issues feature](https://github.com/gitobsidiantuto
 - Blue Topaz by Whyt-Byte
   - [Compatch available](https://raw.githubusercontent.com/gitobsidiantutorial/obsidian-tabs/main/compatch_blue_topaz.css)
 - ITS by SlRVB
- - [Compatch available](https://raw.githubusercontent.com/gitobsidiantutorial/obsidian-tabs/main/compatch_ITS.css)
+  - [Compatch available](https://raw.githubusercontent.com/gitobsidiantutorial/obsidian-tabs/main/compatch_ITS.css)
