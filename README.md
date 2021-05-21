@@ -83,4 +83,4 @@ Please notify me through the [issues feature](https://github.com/gitobsidiantuto
 - ITS by SlRVB
   - [Compatch available](https://raw.githubusercontent.com/gitobsidiantutorial/obsidian-tabs/main/compatch_ITS.css)
 - Wasp by SantiYounger 
-  - [Compatch available](https://raw.githubusercontent.com/gitobsidiantutorial/obsidian-tabs/main/compatch_wasp.css)
+  - Compatch integrated into theme.
