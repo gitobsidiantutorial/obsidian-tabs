@@ -1,0 +1,46 @@
+.stayopen .view-header {
+border-bottom: 2px solid var(--interactive-accent)!important;
+}
+
+.mod-root.workspace-split.mod-vertical div.workspace-leaf:not(.stayopen) > .workspace-leaf-content > .view-header .view-header-title::before{
+background-color:transparent!important
+}
+
+.mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf:not(.stayopen),
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf:not(.stayopen){ 
+border-radius: 5px 5px 0px 0px!important;
+}
+
+.mod-root.workspace-split.mod-vertical div.workspace-leaf{
+border-color: var(--background-secondary-alt)!important;
+border-bottom-width: 0px!important;
+border-right-width: 0px!important
+}
+
+.theme-light .mod-root.workspace-split.mod-vertical div.workspace-leaf{
+border-color: var(--background-secondary-alt)!important;
+border-left-width:3px!important;
+border-bottom-width: 0px!important;
+border-right-width: 0px!important
+}
+
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf hr.workspace-leaf-resize-handle,
+.mod-root.workspace-split.mod-vertical > .mod-vertical hr.workspace-leaf-resize-handle{
+display: none;
+}
+
+
+.mod-root.workspace-split.mod-vertical div.workspace-leaf .view-header{
+border-left-color: transparent!important
+}
+
+.workspace-split.mod-root > .workspace-leaf:last-of-type .workspace-leaf-content,
+.workspace-split.mod-root > .workspace-leaf:first-of-type .workspace-leaf-content {
+    border-radius: 0px!important;
+}
+
+.theme-dark .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.mod-active,
+.theme-dark .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active {
+border: 0!important;
+border-radius: 0px 0px 0px 0px!important;
+}
