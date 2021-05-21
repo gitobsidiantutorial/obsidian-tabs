@@ -1,46 +1,46 @@
-.stayopen .view-header {
+.plugin-tabs .stayopen .view-header {
 border-bottom: 2px solid var(--interactive-accent)!important;
 }
 
-.mod-root.workspace-split.mod-vertical div.workspace-leaf:not(.stayopen) > .workspace-leaf-content > .view-header .view-header-title::before{
+.plugin-tabs .mod-root.workspace-split.mod-vertical div.workspace-leaf:not(.stayopen) > .workspace-leaf-content > .view-header .view-header-title::before{
 background-color:transparent!important
 }
 
-.mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf:not(.stayopen),
-.mod-root.workspace-split.mod-vertical > div.workspace-leaf:not(.stayopen){ 
+.plugin-tabs .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf:not(.stayopen),
+.plugin-tabs .mod-root.workspace-split.mod-vertical > div.workspace-leaf:not(.stayopen){ 
 border-radius: 5px 5px 0px 0px!important;
 }
 
-.mod-root.workspace-split.mod-vertical div.workspace-leaf{
+.plugin-tabs .mod-root.workspace-split.mod-vertical div.workspace-leaf{
 border-color: var(--background-secondary-alt)!important;
 border-bottom-width: 0px!important;
 border-right-width: 0px!important
 }
 
-.theme-light .mod-root.workspace-split.mod-vertical div.workspace-leaf{
+.theme-light.plugin-tabs  .mod-root.workspace-split.mod-vertical div.workspace-leaf{
 border-color: var(--background-secondary-alt)!important;
 border-left-width:3px!important;
 border-bottom-width: 0px!important;
 border-right-width: 0px!important
 }
 
-.mod-root.workspace-split.mod-vertical > div.workspace-leaf hr.workspace-leaf-resize-handle,
-.mod-root.workspace-split.mod-vertical > .mod-vertical hr.workspace-leaf-resize-handle{
+.plugin-tabs .mod-root.workspace-split.mod-vertical > div.workspace-leaf hr.workspace-leaf-resize-handle,
+.plugin-tabs .mod-root.workspace-split.mod-vertical > .mod-vertical hr.workspace-leaf-resize-handle{
 display: none;
 }
 
 
-.mod-root.workspace-split.mod-vertical div.workspace-leaf .view-header{
+.plugin-tabs .mod-root.workspace-split.mod-vertical div.workspace-leaf .view-header{
 border-left-color: transparent!important
 }
 
-.workspace-split.mod-root > .workspace-leaf:last-of-type .workspace-leaf-content,
-.workspace-split.mod-root > .workspace-leaf:first-of-type .workspace-leaf-content {
+.plugin-tabs .workspace-split.mod-root > .workspace-leaf:last-of-type .workspace-leaf-content,
+.plugin-tabs .workspace-split.mod-root > .workspace-leaf:first-of-type .workspace-leaf-content {
     border-radius: 0px!important;
 }
 
-.theme-dark .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.mod-active,
-.theme-dark .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active {
+.plugin-tabs .theme-dark .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf.mod-active,
+.plugin-tabs .theme-dark .mod-root.workspace-split.mod-vertical > div.workspace-leaf.mod-active {
 border: 0!important;
 border-radius: 0px 0px 0px 0px!important;
 }
