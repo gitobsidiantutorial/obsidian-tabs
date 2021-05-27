@@ -297,3 +297,16 @@ padding-right: 10px;
 border-left-width: 2px;
 border-top-width: 2px
 }
+
+.plugin-tabs .workspace-split.mod-root > .workspace-leaf:last-of-type .workspace-leaf-content,
+.plugin-tabs .workspace-split.mod-root > .workspace-leaf:first-of-type .workspace-leaf-content {
+    border-radius: 0px!important;
+}
+
+.focus-mode.plugin-tabs .workspace-split.mod-root .workspace-leaf:not(.stayopen) > .workspace-leaf-content div.view-header{
+    display: block;
+}
+
+.focus-mode.plugin-tabs .workspace-split.mod-root .view-header-title::before{
+    opacity: 0!important;
+}
