@@ -25,8 +25,8 @@ padding-right: 0px!important
     border-left: 0px solid var(--background-modifier-border)!important;
 }
 
-.mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf:not(.mod-active),
-.mod-root.workspace-split.mod-vertical > div.workspace-leaf:not(.mod-active){ 
+.mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf:not(.stayopen),
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf:not(.stayopen){ 
 border-right: 1px solid var(--background-secondary-alt)!important;
 border-radius: 5px 5px 0px 0px!important;
 }

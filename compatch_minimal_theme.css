@@ -13,8 +13,8 @@
     background-color: transparent!important;
 }
 
-.mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf:not(.mod-active),
-.mod-root.workspace-split.mod-vertical > div.workspace-leaf:not(.mod-active){ 
+.mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical > div.workspace-leaf:not(.stayopen),
+.mod-root.workspace-split.mod-vertical > div.workspace-leaf:not(.stayopen){ 
 border-radius: 0px 0px 0px 0px!important;
 border:0!important; 
 border-bottom: 1px solid var(--background-modifier-border)!important;

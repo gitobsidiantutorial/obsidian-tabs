@@ -1,0 +1,31 @@
+.plugin-tabs .stayopen .view-header {
+    height: auto !important;
+}
+
+.view-header-title {
+    line-height: 22px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.title-wrap .view-header-title {
+    white-space: pre;
+}
+
+.title-wrap .stayopen .view-header-title{
+    white-space: pre-wrap;
+}
+
+.stayopen .view-header-icon,
+.stayopen .view-header .view-header-title::before{
+height: auto!important;
+background-color: transparent!important;
+}
+
+
+.view-header-icon, .view-actions {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: auto;
+}
