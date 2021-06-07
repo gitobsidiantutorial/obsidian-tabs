@@ -84,3 +84,5 @@ Please notify me through the [issues feature](https://github.com/gitobsidiantuto
   - [Compatch available](https://raw.githubusercontent.com/gitobsidiantutorial/obsidian-tabs/main/compatch_ITS.css)
 - Wasp by SantiYounger 
   - Compatch integrated into theme.
+- California Coast by mgmeyers
+  - [Compatch available](https://raw.githubusercontent.com/gitobsidiantutorial/obsidian-tabs/main/compatch_california_coast.css)
