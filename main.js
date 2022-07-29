@@ -225,7 +225,7 @@ class TabSettingTab extends obsidian.PluginSettingTab {
         containerEl.createEl("h4", { text: "Pane Relief Specific Settings" });
         new obsidian.Setting(containerEl)
             .setName("Remove Tab Numbers")
-            .setDesc("By default, tabs are numbered, for ease of use with Pane Relief.")
+            .setDesc("Toggle to remove Tab Numbers. Using Tab Numbers requires Pane Relief.")
             .addToggle((toggle) => toggle.setValue(this.plugin.settings.tabNumbering).onChange((value) => {
             this.plugin.settings.tabNumbering = value;
             this.plugin.saveData(this.plugin.settings);
