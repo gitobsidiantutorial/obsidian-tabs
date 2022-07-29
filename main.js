@@ -108,13 +108,15 @@ class TabbedView extends obsidian.Plugin {
         });
     }
     handleOpen() {
-        if (this.app.workspace.activeLeaf) {
+		setTimeout(function(){
+		if (this.app.workspace.activeLeaf) {
             let removeopen = Array.from(this.app.workspace.activeLeaf.containerEl.parentNode.children); //remove class from siblings of active pane, but intentionally not from all
             removeopen.forEach((node) => {
                 node.removeClass("stayopen");
             });
             this.app.workspace.activeLeaf.containerEl.addClass("stayopen");
         }
+		},110);
     }
     handleTabs() {
         function assignStylesToTab(tabparent) {
