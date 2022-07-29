@@ -148,7 +148,7 @@ class TabbedView extends obsidian.Plugin {
 }
 const DEFAULT_SETTINGS = {
     tabEnabled: true,
-    rowOverflow: true,
+    rowOverflow: false,
     horizontalToVertical: false,
     hideButtons: false,
     smallTitle: false,

@@ -159,7 +159,7 @@ interface TabSettings {
 
 const DEFAULT_SETTINGS: TabSettings = {
   tabEnabled: true,
-  rowOverflow: true,
+  rowOverflow: false,
   horizontalToVertical: false,
   hideButtons: false,
   smallTitle: false,
