@@ -164,7 +164,7 @@ const DEFAULT_SETTINGS: TabSettings = {
   hideButtons: false,
   smallTitle: false,
   compactTitle: false,
-  tabNumbering: false,
+  tabNumbering: true,
   tabUnderline: false,
   headerHeight: 29,
 };
