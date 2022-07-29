@@ -27,6 +27,17 @@ export default class TabbedView extends Plugin {
         this.refresh();
       }
     });
+	this.addCommand({
+                id: 'toggle-horizontal-splits',
+                name: 'Toggle Proper Horizontal Splits',
+                callback: () => {
+                    // switch the disabled setting and save
+                    this.settings.horizontalToVertical = !this.settings.horizontalToVertical;
+                    this.saveData(this.settings);
+                    // disable or enable as necessary
+                    this.refresh();
+                }
+    });
   }
   async loadSettings() {
     this.settings = Object.assign(DEFAULT_SETTINGS, await this.loadData());

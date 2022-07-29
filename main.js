@@ -56,6 +56,17 @@ class TabbedView extends obsidian.Plugin {
                     this.refresh();
                 }
             });
+			this.addCommand({
+                id: 'toggle-horizontal-splits',
+                name: 'Toggle Proper Horizontal Splits',
+                callback: () => {
+                    // switch the disabled setting and save
+                    this.settings.horizontalToVertical = !this.settings.horizontalToVertical;
+                    this.saveData(this.settings);
+                    // disable or enable as necessary
+                    this.refresh();
+                }
+            });
         });
     }
     loadSettings() {
