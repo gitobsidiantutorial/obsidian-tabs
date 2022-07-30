@@ -221,10 +221,10 @@ text-decoration: underline;
 .plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical:first-of-type > div.workspace-leaf:last-of-type      .view-header-title-container,
 .plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical:only-of-type > div.workspace-leaf                   .view-header-title, /* alt+9 jumps to the LAST pane open, rather than the 9th, so only number if this is the only vertical split*/
 .plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical:only-of-type > div.workspace-leaf:last-of-type      .view-header-title,
-.plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf                   .view-header-title,
-.plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf:last-of-type      .view-header-title,
-.plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf                   .view-header-title-container, 
-.plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf:last-of-type      .view-header-title-container {padding-left: 0px}
+.plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical  div.workspace-leaf                   .view-header-title,
+.plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical  div.workspace-leaf:last-of-type      .view-header-title,
+.plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical  div.workspace-leaf                   .view-header-title-container, 
+.plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical  div.workspace-leaf:last-of-type      .view-header-title-container {padding-left: 0px}
 
 .plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical:first-of-type > .workspace-leaf:nth-of-type(n+9)  .view-header-title,
 .plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > .workspace-leaf:nth-of-type(n+9)  .view-header-title {padding-left: 5px} /* intentionally less specific, so it gets overridden */
