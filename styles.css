@@ -231,7 +231,7 @@ text-decoration: underline;
 
 
 .plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical .workspace-split.mod-vertical:first-of-type > div.workspace-leaf > .workspace-leaf-content > .view-header .view-header-title::before,
-.plugin-tabs:not(.tab-numbering) .mod-root.workspace-split.mod-vertical > div.workspace-leaf > .workspace-leaf-content > .view-header .view-header-title::before{
+.plugin-tabs:not(.tab-numbering) .mod-root.workspace-split div.workspace-leaf > .workspace-leaf-content > .view-header .view-header-title::before{
 counter-reset: variable var(--pane-relief-label);
 content: counter(variable);
 padding-top: 2px;
